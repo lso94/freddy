@@ -1,0 +1,60 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  image?: string;
+}
+
+const {
+  title = 'Boxeo, K‑1 y Muay Thai en Andorra | Freddy Boxing Club',
+  description = 'Entrena en Andorra con metodología clara: técnica, condición y mentalidad. Clases de boxeo, K‑1 y muay thai para todos los niveles.',
+  canonical,
+  image = 'https://freddyboxing.com/og-image.jpg'
+} = Astro.props;
+
+const currentUrl = canonical || Astro.url.href;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={currentUrl} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={currentUrl} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+    <!-- Preconnect a Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts: Oswald + Inter -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- Estilos globales -->
+    <link rel="stylesheet" href="/src/styles/globals.css" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

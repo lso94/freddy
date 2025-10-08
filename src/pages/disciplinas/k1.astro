@@ -1,0 +1,156 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+import { Image } from 'astro:assets';
+
+import kickImg from '../../assets/images/11A_00015.jpeg';
+
+const title = 'Kick Boxing K-1 en Andorra | Club K1 Andorra';
+const description = 'Kick Boxing K-1 en Andorra. Combina puños y patadas. Entrena con campeones desde 2007. Clases para todos los niveles.';
+---
+
+<BaseLayout title={title} description={description} canonical="https://freddyboxing.com/disciplinas/k1/">
+  <Header />
+  <WhatsAppButton />
+
+  <main class="discipline-page">
+    <section class="discipline-hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <span class="discipline-badge">DISCIPLINA</span>
+        <h1>KICK BOXING / K-1</h1>
+        <p class="discipline-tagline">Puños y piernas en perfecta armonía</p>
+      </div>
+    </section>
+
+    <section class="discipline-intro py-5">
+      <div class="container">
+        <div class="intro-grid">
+          <div class="intro-image">
+            <Image src={kickImg} alt="Entrenamiento de Kick Boxing K-1 en Andorra" width={600} height={400} />
+          </div>
+          <div class="intro-content">
+            <h2>La Práctica del Kick Boxing</h2>
+            <p>El kickboxing es un <strong>deporte de contacto</strong> que se originó en Japón en la década de 1960. Combina técnicas de puño y patada de diversas artes marciales como el karate, el muay thai y el boxeo. Los competidores suelen enfrentarse en un ring y ganan puntos por golpear a sus oponentes de manera efectiva.</p>
+            <p>Además de ser un deporte de competición, el kickboxing también se practica como una forma de <strong>ejercicio y entrenamiento físico</strong>. Muchas personas encuentran en el kickboxing una excelente manera de mejorar su condición física, quemar calorías, aumentar la fuerza y la resistencia, y aprender técnicas de defensa personal.</p>
+            <p class="highlight-text">¡Es una actividad divertida y desafiante que puede beneficiar tanto el cuerpo como la mente!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section class="discipline-benefits py-5">
+      <div class="container">
+        <h2 class="text-center mb-3">Beneficios del Kick Boxing</h2>
+        <p class="section-intro">Es una disciplina que requiere fuerza, resistencia y habilidad técnica. Estos son sus principales beneficios:</p>
+
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">💪</div>
+            <h3>Mejora Condición Física</h3>
+            <p>Ejercicio cardiovascular intenso que ayuda a mejorar la resistencia, fuerza y flexibilidad. Trabaja todo el cuerpo de manera integral.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">🔥</div>
+            <h3>Quema Calorías</h3>
+            <p>Al ser un ejercicio de alta intensidad, el kickboxing es una excelente forma de quemar calorías y perder peso de manera efectiva.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">❤️</div>
+            <h3>Salud Cardiovascular</h3>
+            <p>Al ser un ejercicio aeróbico, el kickboxing ayuda a mejorar la salud del corazón y reducir el riesgo de enfermedades cardiovasculares.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">🧘</div>
+            <h3>Reduce Estrés</h3>
+            <p>Al ser un ejercicio vigoroso, el kickboxing libera endorfinas que ayudan a reducir el estrés y mejorar el estado de ánimo.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">⚖️</div>
+            <h3>Coordinación y Equilibrio</h3>
+            <p>Al practicar kickboxing se trabajan diferentes grupos musculares al mismo tiempo, mejorando la coordinación y el equilibrio.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">💎</div>
+            <h3>Fortalece Músculos</h3>
+            <p>El kickboxing trabaja todos los grupos musculares del cuerpo, ayudando a fortalecerlos y tonificarlos de manera equilibrada.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">🎯</div>
+            <h3>Disciplina y Concentración</h3>
+            <p>Para practicar kickboxing se requiere disciplina y concentración, lo que puede ayudar a mejorar estas habilidades en otras áreas de la vida.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">⚡</div>
+            <h3>Confianza y Autoestima</h3>
+            <p>Al aprender técnicas de defensa personal y mejorar la condición física, los practicantes suelen sentirse más seguros y aumentar su autoestima.</p>
+          </div>
+        </div>
+
+        <div class="benefits-summary">
+          <p>En resumen, el kick boxing ofrece una amplia gama de beneficios físicos, mentales y emocionales. Es una disciplina completa que mejora tu forma física mientras desarrollas habilidades de autodefensa y fortaleces tu mente.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="discipline-cta py-5">
+      <div class="container text-center">
+        <h2>¿Listo para entrenar?</h2>
+        <p>Únete al mejor club de Kick Boxing en Andorra</p>
+        <div class="cta-buttons">
+          <a href="https://api.whatsapp.com/send?phone=376331785&text=Hola%20Freddy%2C%20quiero%20información%20sobre%20clases%20de%20kick%20boxing." class="btn" target="_blank" rel="noopener noreferrer">
+            Reservar clase de prueba
+          </a>
+          <a href="/horarios-precios/" class="btn outline">Ver horarios y precios</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .discipline-page { background: var(--bg); }
+  .discipline-hero { position: relative; min-height: 60vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(225, 6, 0, 0.2) 0%, rgba(11, 13, 15, 0.95) 50%, rgba(205, 164, 52, 0.2) 100%); overflow: hidden; margin-top: 80px; }
+  .hero-overlay { position: absolute; inset: 0; background: radial-gradient(circle at 30% 50%, rgba(225, 6, 0, 0.15) 0%, transparent 50%), radial-gradient(circle at 70% 50%, rgba(205, 164, 52, 0.1) 0%, transparent 50%); }
+  .hero-content { position: relative; z-index: 2; text-align: center; }
+  .discipline-badge { display: inline-block; font-family: 'Oswald', sans-serif; font-size: 0.875rem; letter-spacing: 0.3em; color: var(--gold); background: rgba(205, 164, 52, 0.1); padding: 0.5rem 1.5rem; border: 1px solid var(--gold); margin-bottom: 1rem; }
+  .discipline-hero h1 { font-size: clamp(3rem, 8vw, 5rem); color: var(--fg); margin-bottom: 1rem; text-shadow: 0 4px 20px rgba(225, 6, 0, 0.5); }
+  .discipline-tagline { font-size: clamp(1.25rem, 3vw, 1.75rem); color: var(--accent); font-style: italic; }
+  .discipline-intro { background: var(--bg); }
+  .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .intro-image img { width: 100%; height: auto; border: 2px solid var(--line); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); }
+  .intro-content h2 { color: var(--accent); margin-bottom: 1.5rem; }
+  .intro-content p { font-size: 1.1rem; line-height: 1.8; color: rgba(246, 247, 249, 0.9); margin-bottom: 1.5rem; }
+  .highlight-text { color: var(--gold); font-weight: 600; font-style: italic; }
+  .section-divider { height: 80px; position: relative; display: flex; align-items: center; justify-content: center; }
+  .section-divider::before { content: ''; position: absolute; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--accent) 50%, transparent); }
+  .section-divider::after { content: '◆'; position: relative; z-index: 1; color: var(--accent); font-size: 1.2rem; background: var(--bg); padding: 0 2rem; text-shadow: 0 0 20px rgba(225, 6, 0, 0.6); }
+  .discipline-benefits { background: var(--card); }
+  .section-intro { text-align: center; font-size: 1.15rem; color: rgba(246, 247, 249, 0.9); max-width: 800px; margin: 0 auto 3rem; }
+  .benefits-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-bottom: 3rem; }
+  .benefit-card { background: var(--bg); border: 1px solid var(--line); padding: 2rem 1.5rem; text-align: center; transition: all 0.3s ease; }
+  .benefit-card:hover { border-color: var(--gold); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(205, 164, 52, 0.2); }
+  .benefit-icon { font-size: 3rem; margin-bottom: 1rem; }
+  .benefit-card h3 { color: var(--fg); font-size: 1.25rem; margin-bottom: 1rem; }
+  .benefit-card p { color: rgba(246, 247, 249, 0.8); font-size: 0.95rem; line-height: 1.6; }
+  .benefits-summary { background: rgba(225, 6, 0, 0.05); border-left: 4px solid var(--accent); padding: 2rem; font-size: 1.1rem; line-height: 1.8; color: rgba(246, 247, 249, 0.9); font-style: italic; }
+  .discipline-cta { background: var(--bg); }
+  .discipline-cta h2 { color: var(--fg); margin-bottom: 1rem; }
+  .discipline-cta p { font-size: 1.25rem; color: var(--gold); margin-bottom: 2rem; }
+  .cta-buttons { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
+  @media (max-width: 1024px) { .intro-grid { grid-template-columns: 1fr; gap: 2rem; } .benefits-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 768px) { .benefits-grid { grid-template-columns: 1fr; } .cta-buttons { flex-direction: column; } }
+</style>

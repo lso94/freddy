@@ -1,0 +1,143 @@
+---
+import { Image } from 'astro:assets';
+import logoImg from '../assets/images/logo-2-1-2048x1743.png';
+---
+
+<div id="intro-animation" class="intro-animation">
+  <div class="intro-content">
+    <!-- Logo con efecto de carga -->
+    <div class="intro-logo">
+      <Image src={logoImg} alt="Freddy Boxing" width={300} height={255} />
+      <div class="loading-bar"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .intro-animation {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: linear-gradient(135deg, #0B0D0F 0%, #14171A 50%, #0B0D0F 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeOut 0.4s ease-out 1.2s forwards;
+    pointer-events: none;
+  }
+
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  .intro-content {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .intro-logo {
+    animation: logoAppear 0.6s ease-out;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro-logo img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+  }
+
+  @keyframes logoAppear {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .intro-logo :global(img) {
+    filter: drop-shadow(0 0 30px rgba(225, 6, 0, 0.8))
+            drop-shadow(0 0 60px rgba(205, 164, 52, 0.4));
+    animation: pulse 1s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      filter: drop-shadow(0 0 30px rgba(225, 6, 0, 0.8))
+              drop-shadow(0 0 60px rgba(205, 164, 52, 0.4));
+    }
+    50% {
+      filter: drop-shadow(0 0 40px rgba(225, 6, 0, 1))
+              drop-shadow(0 0 80px rgba(205, 164, 52, 0.6));
+    }
+  }
+
+  .loading-bar {
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    max-width: 300px;
+    height: 3px;
+    background: rgba(225, 6, 0, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .loading-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, var(--accent), var(--gold));
+    box-shadow: 0 0 10px rgba(225, 6, 0, 0.8);
+    animation: loadProgress 1s ease-out forwards;
+  }
+
+  @keyframes loadProgress {
+    to {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .intro-logo img {
+      max-width: 250px;
+      height: auto;
+    }
+  }
+</style>
+
+<script>
+  // Remover el elemento del DOM después de la animación (1.6s total)
+  setTimeout(() => {
+    const intro = document.getElementById('intro-animation');
+    if (intro) {
+      intro.remove();
+    }
+  }, 1600);
+
+  // Prevenir scroll durante la animación
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => {
+    document.body.style.overflow = '';
+  }, 1200);
+</script>

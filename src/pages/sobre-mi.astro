@@ -1,0 +1,864 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import { Image } from 'astro:assets';
+
+// Importar imágenes
+import heroImg from '../assets/images/image00007-scaled.jpeg';
+import kickImg from '../assets/images/11A_00015.jpeg';
+import combatImg1 from '../assets/images/IMG_1657-scaled.jpeg';
+import combatImg2 from '../assets/images/IMG_2011_kick-andorra_fin-scaled.jpeg';
+import functionalImg from '../assets/images/13007147_1626683194318652_6297385222729411090_n.jpeg';
+
+const title = 'Alfred "Freddy" Calero | Campeón de Europa | Entrenador en Andorra';
+const description = 'Más de 30 años de experiencia en artes marciales. Campeón de Europa y España. Entrenador profesional de boxeo, kick boxing y muay thai en Andorra.';
+---
+
+<BaseLayout title={title} description={description} canonical="https://freddyboxing.com/sobre-mi/">
+  <Header />
+  <WhatsAppButton />
+
+  <main class="warrior-page">
+    <!-- Hero Cinematográfico -->
+    <section class="warrior-hero">
+      <div class="hero-bg"></div>
+      <div class="smoke-overlay"></div>
+
+      <div class="hero-warrior-content">
+        <div class="warrior-image-container">
+          <div class="battle-scars"></div>
+          <Image src={heroImg} alt="Alfred Freddy Calero - Guerrero del Ring" width={600} height={900} class="warrior-portrait" />
+          <div class="warrior-glow"></div>
+        </div>
+
+        <div class="warrior-title-block">
+          <span class="warrior-subtitle">EL GUERRERO</span>
+          <h1 class="warrior-name">
+            <span class="first-name">ALFRED</span>
+            <span class="nickname">"FREDDY"</span>
+            <span class="last-name">CALERO</span>
+          </h1>
+          <div class="warrior-stats">
+            <div class="stat">
+              <span class="stat-number">30+</span>
+              <span class="stat-label">Años de Batalla</span>
+            </div>
+            <div class="stat-divider">|</div>
+            <div class="stat">
+              <span class="stat-number">∞</span>
+              <span class="stat-label">Victorias del Espíritu</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <span>DESCUBRE LA LEYENDA</span>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M10 15L5 10L6.5 8.5L10 12L13.5 8.5L15 10L10 15Z" fill="currentColor"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Camino del Guerrero - Timeline -->
+    <section class="warrior-path py-5">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="title-line"></span>
+          EL CAMINO DEL GUERRERO
+          <span class="title-line"></span>
+        </h2>
+
+        <div class="path-timeline">
+          <!-- Orígenes -->
+          <div class="timeline-block left">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-era">LOS ORÍGENES</span>
+              <h3>El Nacimiento de una Leyenda</h3>
+              <p>Más de 30 años forjándome en el ring. No nací campeón, me hice guerrero. Cada golpe recibido fue una lección, cada victoria un escalón hacia la maestría.</p>
+            </div>
+          </div>
+
+          <!-- Conquistas -->
+          <div class="timeline-block right">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-era">LAS CONQUISTAS</span>
+              <h3>Campeón de Europa y España</h3>
+              <p>No luché por títulos, luché por demostrar que la disciplina y el corazón superan cualquier talento natural. Los cinturones son solo metal, el verdadero premio es el respeto ganado en cada combate.</p>
+              <div class="combat-gallery">
+                <div class="combat-photo">
+                  <Image src={kickImg} alt="Freddy en combate - Tailandia" width={300} height={200} />
+                  <span class="photo-caption">Tailandia, 2015</span>
+                </div>
+                <div class="combat-photo">
+                  <Image src={combatImg1} alt="Freddy en el ring" width={300} height={200} />
+                  <span class="photo-caption">En el ring</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Maestría -->
+          <div class="timeline-block left">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-era">LA MAESTRÍA</span>
+              <h3>Del Ring al Maestrazgo</h3>
+              <p>Titulaciones nacionales e internacionales en boxeo, kick boxing, muay thai y krav maga. No colecciono diplomas, colecciono conocimiento para transmitir a la próxima generación de guerreros.</p>
+            </div>
+          </div>
+
+          <!-- Legado -->
+          <div class="timeline-block right">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-era">EL LEGADO</span>
+              <h3>Club K-1 Andorra - Desde 2007</h3>
+              <p>No entreno atletas, forjo guerreros. Desde 2007, cada alumno que entra por esa puerta es un lienzo en blanco donde pinto disciplina, respeto y fuerza interior. Esta es mi verdadera conquista.</p>
+              <div class="combat-gallery">
+                <div class="combat-photo wide">
+                  <Image src={combatImg2} alt="Entrenamiento en K1 Andorra" width={400} height={250} />
+                  <span class="photo-caption">K1 Andorra</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filosofía del Guerrero -->
+    <section class="warrior-philosophy">
+      <div class="container">
+        <div class="philosophy-grid">
+          <div class="philosophy-text">
+            <h2>LA FILOSOFÍA</h2>
+            <blockquote class="warrior-quote">
+              "Un guerrero no se mide por los combates ganados, sino por las veces que se levanta después de caer. En el ring y en la vida, la batalla más dura es contigo mismo."
+            </blockquote>
+            <p class="philosophy-body">
+              El boxeo, el kick boxing, el muay thai... son solo vehículos. Lo que realmente enseño es disciplina mental, fortaleza emocional y respeto inquebrantable.
+            </p>
+            <p class="philosophy-body">
+              No entreno para formar campeones de torneos, entreno para formar campeones de la vida. Personas que enfrentan sus miedos, superan sus límites y nunca se rinden.
+            </p>
+          </div>
+
+          <div class="philosophy-image">
+            <Image src={functionalImg} alt="Freddy entrenamiento funcional" width={500} height={600} />
+            <div class="philosophy-overlay">
+              <span>ENTRENAMIENTO FUNCIONAL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Arsenal del Guerrero - Disciplinas -->
+    <section class="warrior-arsenal py-5">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="title-line"></span>
+          EL ARSENAL
+          <span class="title-line"></span>
+        </h2>
+
+        <div class="arsenal-grid">
+          <div class="arsenal-card">
+            <div class="arsenal-icon">🥊</div>
+            <h3>Boxeo</h3>
+            <p>El arte noble. Técnica pura, movimientos precisos. La base de todo guerrero del ring.</p>
+          </div>
+
+          <div class="arsenal-card">
+            <div class="arsenal-icon">🦵</div>
+            <h3>Kick Boxing / K-1</h3>
+            <p>Puños y piernas en perfecta armonía. La evolución del combate moderno.</p>
+          </div>
+
+          <div class="arsenal-card">
+            <div class="arsenal-icon">⚔️</div>
+            <h3>Muay Thai</h3>
+            <p>Las 8 armas. El arte milenario tailandés en su máxima expresión.</p>
+          </div>
+
+          <div class="arsenal-card">
+            <div class="arsenal-icon">🛡️</div>
+            <h3>Krav Maga</h3>
+            <p>Defensa personal real. Sin reglas, solo supervivencia y eficacia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Final Épico -->
+    <section class="warrior-cta">
+      <div class="cta-content">
+        <h2>¿ESTÁS LISTO PARA CONVERTIRTE EN GUERRERO?</h2>
+        <p>El camino no es fácil, pero prometo que vale la pena. Cada gota de sudor, cada músculo que arde, cada límite que superas... te transforman.</p>
+        <div class="cta-buttons">
+          <a href="https://api.whatsapp.com/send?phone=376331785&text=Hola%20Freddy%2C%20quiero%20comenzar%20mi%20camino%20como%20guerrero." class="btn-epic" target="_blank" rel="noopener noreferrer">
+            COMENZAR MI CAMINO
+          </a>
+          <a href="/horarios-precios/" class="btn-epic outline">
+            VER HORARIOS
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .warrior-page {
+    background: var(--bg);
+    overflow-x: hidden;
+  }
+
+  /* Hero Cinematográfico */
+  .warrior-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 30% 50%, rgba(225, 6, 0, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 70% 50%, rgba(205, 164, 52, 0.1) 0%, transparent 50%),
+      linear-gradient(135deg, #0B0D0F 0%, #14171A 100%);
+  }
+
+  .smoke-overlay {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(ellipse at 20% 80%, rgba(225, 6, 0, 0.1) 0%, transparent 40%),
+      radial-gradient(ellipse at 80% 20%, rgba(205, 164, 52, 0.08) 0%, transparent 40%);
+    animation: smokeFloat 8s ease-in-out infinite;
+  }
+
+  @keyframes smokeFloat {
+    0%, 100% { opacity: 0.3; transform: translateY(0); }
+    50% { opacity: 0.6; transform: translateY(-20px); }
+  }
+
+  .hero-warrior-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1400px;
+    padding: 2rem;
+  }
+
+  .warrior-image-container {
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .battle-scars {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border: 3px solid var(--gold);
+    opacity: 0.3;
+    clip-path: polygon(
+      0 10%, 10% 0, 90% 0, 100% 10%,
+      100% 90%, 90% 100%, 10% 100%, 0 90%
+    );
+  }
+
+  .warrior-portrait {
+    width: 400px;
+    height: auto;
+    filter: grayscale(100%) contrast(1.2);
+    clip-path: polygon(
+      5% 0, 95% 0, 100% 5%,
+      100% 95%, 95% 100%, 5% 100%,
+      0 95%, 0 5%
+    );
+    box-shadow:
+      0 0 60px rgba(225, 6, 0, 0.5),
+      inset 0 0 100px rgba(225, 6, 0, 0.2);
+  }
+
+  .warrior-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(225, 6, 0, 0.3) 0%, transparent 60%);
+    mix-blend-mode: screen;
+    animation: glowPulse 3s ease-in-out infinite;
+  }
+
+  @keyframes glowPulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+
+  .warrior-title-block {
+    flex: 1;
+    text-align: left;
+  }
+
+  .warrior-subtitle {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(205, 164, 52, 0.6);
+  }
+
+  .warrior-name {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .warrior-name span {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    line-height: 1;
+  }
+
+  .first-name {
+    font-size: clamp(3rem, 8vw, 6rem);
+    color: var(--fg);
+    text-shadow: 4px 4px 0 rgba(225, 6, 0, 0.3);
+  }
+
+  .nickname {
+    font-size: clamp(2rem, 6vw, 4rem);
+    color: var(--accent);
+    font-style: italic;
+    margin-left: 2rem;
+    text-shadow: 0 0 30px rgba(225, 6, 0, 0.8);
+  }
+
+  .last-name {
+    font-size: clamp(3rem, 8vw, 6rem);
+    color: var(--fg);
+    text-shadow: 4px 4px 0 rgba(205, 164, 52, 0.3);
+  }
+
+  .warrior-stats {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stat-number {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .stat-divider {
+    font-size: 3rem;
+    color: var(--line);
+  }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--gold);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-10px); }
+  }
+
+  /* Timeline del Camino del Guerrero */
+  .warrior-path {
+    background: var(--bg);
+    position: relative;
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    color: var(--fg);
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  .title-line {
+    flex: 1;
+    max-width: 200px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  }
+
+  .path-timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .path-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg,
+      var(--accent) 0%,
+      var(--gold) 50%,
+      var(--accent) 100%
+    );
+    transform: translateX(-50%);
+  }
+
+  .timeline-block {
+    position: relative;
+    margin-bottom: 4rem;
+    width: 50%;
+  }
+
+  .timeline-block.left {
+    padding-right: 4rem;
+    text-align: right;
+  }
+
+  .timeline-block.right {
+    margin-left: 50%;
+    padding-left: 4rem;
+  }
+
+  .timeline-marker {
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background: var(--accent);
+    border: 5px solid var(--bg);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(225, 6, 0, 0.8);
+  }
+
+  .timeline-block.left .timeline-marker {
+    right: -15px;
+  }
+
+  .timeline-block.right .timeline-marker {
+    left: -15px;
+  }
+
+  .timeline-content {
+    background: var(--card);
+    padding: 2rem;
+    border: 1px solid var(--line);
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .timeline-content:hover {
+    border-color: var(--gold);
+    box-shadow: 0 10px 40px rgba(205, 164, 52, 0.2);
+    transform: translateY(-5px);
+  }
+
+  .timeline-era {
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    background: rgba(205, 164, 52, 0.1);
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    border-left: 3px solid var(--accent);
+  }
+
+  .timeline-content h3 {
+    color: var(--fg);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .timeline-content p {
+    color: rgba(246, 247, 249, 0.8);
+    line-height: 1.8;
+  }
+
+  .combat-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .combat-gallery .wide {
+    grid-column: 1 / -1;
+  }
+
+  .combat-photo {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--line);
+  }
+
+  .combat-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(50%);
+    transition: all 0.4s ease;
+  }
+
+  .combat-photo:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+  }
+
+  .photo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    padding: 1rem;
+    font-size: 0.875rem;
+    color: var(--gold);
+    text-align: center;
+  }
+
+  /* Filosofía */
+  .warrior-philosophy {
+    background: var(--card);
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .warrior-philosophy::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(225, 6, 0, 0.08) 0%, transparent 70%);
+  }
+
+  .philosophy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .philosophy-text h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--accent);
+    margin-bottom: 2rem;
+  }
+
+  .warrior-quote {
+    font-family: Georgia, serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--gold);
+    border-left: 4px solid var(--accent);
+    padding-left: 2rem;
+    margin: 2rem 0;
+    line-height: 1.6;
+  }
+
+  .philosophy-body {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(246, 247, 249, 0.9);
+    margin-bottom: 1.5rem;
+  }
+
+  .philosophy-image {
+    position: relative;
+  }
+
+  .philosophy-image img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(80%) contrast(1.1);
+    clip-path: polygon(0 5%, 5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%);
+  }
+
+  .philosophy-overlay {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    background: rgba(225, 6, 0, 0.9);
+    padding: 1rem 2rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--fg);
+    clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
+  }
+
+  /* Arsenal */
+  .warrior-arsenal {
+    background: var(--bg);
+  }
+
+  .arsenal-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .arsenal-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .arsenal-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(225, 6, 0, 0.05), rgba(205, 164, 52, 0.05));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .arsenal-card:hover::before {
+    opacity: 1;
+  }
+
+  .arsenal-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(205, 164, 52, 0.3);
+  }
+
+  .arsenal-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition: all 0.4s ease;
+  }
+
+  .arsenal-card:hover .arsenal-icon {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  .arsenal-card h3 {
+    color: var(--fg);
+    margin-bottom: 1rem;
+  }
+
+  .arsenal-card p {
+    color: rgba(246, 247, 249, 0.8);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* CTA Épico */
+  .warrior-cta {
+    background:
+      linear-gradient(135deg, rgba(225, 6, 0, 0.1) 0%, rgba(11, 13, 15, 0.95) 50%, rgba(205, 164, 52, 0.1) 100%),
+      url('/src/assets/images/11A_00015.jpeg') center/cover;
+    padding: 8rem 0;
+    text-align: center;
+    position: relative;
+  }
+
+  .warrior-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(11, 13, 15, 0.85);
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .cta-content h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--fg);
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 0 var(--accent);
+  }
+
+  .cta-content p {
+    font-size: 1.25rem;
+    color: rgba(246, 247, 249, 0.9);
+    margin-bottom: 3rem;
+    line-height: 1.8;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-epic {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 1.5rem 3rem;
+    background: var(--accent);
+    color: var(--fg);
+    border: 2px solid var(--accent);
+    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(225, 6, 0, 0.4);
+  }
+
+  .btn-epic:hover {
+    background: transparent;
+    color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(225, 6, 0, 0.6);
+  }
+
+  .btn-epic.outline {
+    background: transparent;
+    border-color: var(--gold);
+    color: var(--gold);
+    box-shadow: 0 10px 30px rgba(205, 164, 52, 0.3);
+  }
+
+  .btn-epic.outline:hover {
+    background: var(--gold);
+    color: var(--bg);
+    box-shadow: 0 15px 40px rgba(205, 164, 52, 0.5);
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .hero-warrior-content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .warrior-title-block {
+      text-align: center;
+    }
+
+    .warrior-portrait {
+      width: 300px;
+    }
+
+    .timeline-block,
+    .timeline-block.left,
+    .timeline-block.right {
+      width: 100%;
+      margin-left: 0;
+      padding-left: 4rem;
+      padding-right: 0;
+      text-align: left;
+    }
+
+    .path-timeline::before {
+      left: 15px;
+    }
+
+    .timeline-marker {
+      left: 0 !important;
+      right: auto !important;
+    }
+
+    .philosophy-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .arsenal-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .warrior-stats {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .stat-divider {
+      display: none;
+    }
+
+    .arsenal-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .combat-gallery {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+    }
+
+    .btn-epic {
+      width: 100%;
+    }
+  }
+</style>

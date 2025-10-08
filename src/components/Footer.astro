@@ -1,0 +1,120 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>FREDDY BOXING</h3>
+        <p>Boxeo, K-1 y Muay Thai en Andorra</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Contacto</h4>
+        <p>
+          <a href="tel:+376331785">Tel: +376 331 785</a>
+        </p>
+        <p>
+          <a href="https://api.whatsapp.com/send?phone=376331785" target="_blank" rel="noopener noreferrer">
+            WhatsApp
+          </a>
+        </p>
+        <p>
+          <a href="mailto:info@freddyboxing.com">info@freddyboxing.com</a>
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Enlaces</h4>
+        <p><a href="/sobre-mi/">Sobre mí</a></p>
+        <p><a href="/disciplinas/">Disciplinas</a></p>
+        <p><a href="/horarios-precios/">Horarios y Precios</a></p>
+        <p><a href="/contacto/">Contacto</a></p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Legal</h4>
+        <p><a href="/legal/aviso-legal/">Aviso Legal</a></p>
+        <p><a href="/legal/privacidad/">Política de Privacidad</a></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {currentYear} Freddy Boxing — Andorra la Vella</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--card);
+    border-top: 1px solid var(--line);
+    padding: 3rem 0 1.5rem;
+    margin-top: 5rem;
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-section h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-section h4 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--fg);
+    margin-bottom: 1rem;
+  }
+
+  .footer-section p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: rgba(246, 247, 249, 0.8);
+  }
+
+  .footer-section a {
+    color: rgba(246, 247, 249, 0.8);
+    transition: color 0.3s ease;
+  }
+
+  .footer-section a:hover {
+    color: var(--accent);
+  }
+
+  .footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid var(--line);
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    font-size: 0.875rem;
+    color: rgba(246, 247, 249, 0.6);
+  }
+
+  @media (max-width: 768px) {
+    .footer-content {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-content {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,283 @@
+---
+import { Image } from 'astro:assets';
+import logoImg from '../assets/images/logo-2-1-2048x1743.png';
+
+const navLinks = [
+  { text: 'SOBRE MÍ', href: '/sobre-mi/' },
+  {
+    text: 'DISCIPLINAS',
+    href: '/disciplinas/',
+    submenu: [
+      { text: 'Boxeo', href: '/disciplinas/boxeo/' },
+      { text: 'Kick Boxing / K-1', href: '/disciplinas/k1/' },
+      { text: 'Muay Thai', href: '/disciplinas/muay-thai/' }
+    ]
+  },
+  { text: 'HORARIOS Y PRECIOS', href: '/horarios-precios/' },
+  { text: 'CURSOS', href: '/cursos/' },
+  { text: 'GALERÍA', href: '/galeria/' },
+  { text: 'CONTACTO', href: '/contacto/' }
+];
+---
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav">
+      <a href="/" class="logo">
+        <Image src={logoImg} alt="Freddy Boxing - Club K1 Andorra" width={120} height={102} />
+      </a>
+
+      <div class="nav-links">
+        {navLinks.map(link => (
+          link.submenu ? (
+            <div class="nav-item-dropdown">
+              <a href={link.href} class="nav-link">
+                {link.text}
+                <span class="dropdown-arrow">▼</span>
+              </a>
+              <div class="dropdown-menu">
+                {link.submenu.map(sublink => (
+                  <a href={sublink.href} class="dropdown-link">{sublink.text}</a>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <a href={link.href} class="nav-link">{link.text}</a>
+          )
+        ))}
+      </div>
+
+      <button class="mobile-menu-toggle" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: transparent;
+    backdrop-filter: none;
+    border-bottom: none;
+    transition: all 0.3s ease;
+  }
+
+  .site-header.scrolled {
+    background: rgba(11, 13, 15, 0.95);
+    backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid rgba(225, 6, 0, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .site-header.scrolled::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0.3;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 0;
+    gap: 2rem;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+
+  .logo img {
+    height: 50px;
+    width: auto;
+    filter: drop-shadow(0 2px 8px rgba(225, 6, 0, 0.4));
+    transition: all 0.3s ease;
+  }
+
+  .logo:hover img {
+    filter: drop-shadow(0 4px 12px rgba(225, 6, 0, 0.6));
+    transform: translateY(-2px);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .nav-link {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(246, 247, 249, 0.9);
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.5rem 0;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: var(--accent);
+    text-shadow: 0 0 8px rgba(225, 6, 0, 0.4);
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .nav-item-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .dropdown-arrow {
+    font-size: 0.6rem;
+    margin-left: 0.4rem;
+    transition: transform 0.3s ease;
+    display: inline-block;
+  }
+
+  .nav-item-dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    background: rgba(11, 13, 15, 0.98);
+    backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(225, 6, 0, 0.2);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+  }
+
+  .dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--gold));
+  }
+
+  .nav-item-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .dropdown-link {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgba(246, 247, 249, 0.85);
+    transition: all 0.2s ease;
+    position: relative;
+  }
+
+  .dropdown-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+  }
+
+  .dropdown-link:hover {
+    color: var(--accent);
+    background: rgba(225, 6, 0, 0.05);
+    padding-left: 2rem;
+  }
+
+  .dropdown-link:hover::before {
+    width: 1rem;
+    left: 0.5rem;
+  }
+
+  .mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .mobile-menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--fg);
+    transition: all 0.3s ease;
+  }
+
+  @media (max-width: 1024px) {
+    .nav-links {
+      display: none;
+    }
+
+    .mobile-menu-toggle {
+      display: flex;
+    }
+  }
+
+</style>
+
+<script>
+  const header = document.querySelector('.site-header');
+
+  function handleScroll() {
+    if (window.scrollY > 50) {
+      header?.classList.add('scrolled');
+    } else {
+      header?.classList.remove('scrolled');
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll);
+  handleScroll(); // Check initial state
+</script>

@@ -1,0 +1,1149 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import IntroAnimation from '../components/IntroAnimation.astro';
+import { Image } from 'astro:assets';
+
+// Importar imágenes
+import heroImg from '../assets/images/COPIA-SLIDER-scaled.jpeg';
+import trainerImg from '../assets/images/2.png';
+import boxingImg from '../assets/images/IMG_2011_kick-andorra_fin-scaled.jpeg';
+import kickImg from '../assets/images/11A_00015.jpeg';
+import muaythaiImg from '../assets/images/IMG_1657-scaled.jpeg';
+import testimonio1Img from '../assets/images/unnamed.png';
+import testimonio2Img from '../assets/images/unnamed-1.png';
+import testimonio3Img from '../assets/images/Captura-de-pantalla-2024-06-24-193839.png';
+
+const title = 'Kick Boxing, K-1, Muay Thai y Boxeo en Andorra | Club K1 Andorra';
+const description = 'Vive la experiencia en K1 Andorra. Kick boxing, boxeo y muay thai para todos los niveles. Un club, una familia, una pasión: la lucha. Desde 2007.';
+---
+
+<BaseLayout title={title} description={description} canonical="https://freddyboxing.com/">
+  <IntroAnimation />
+  <Header />
+  <WhatsAppButton />
+
+  <main>
+    <!-- Hero Section con animación de texto -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <h1>Boxeo, K-1 y Muay Thai en Andorra</h1>
+
+        <!-- Frase motivacional de Freddy -->
+        <div class="hero-phrase" aria-hidden="true">
+          <span class="phrase-part active" data-part="1">SIN SACRIFICIO</span>
+          <span class="phrase-part" data-part="2">NO HAY GLORIA</span>
+        </div>
+
+        <p class="hero-tagline">Un club, una familia, una pasión: la lucha.</p>
+        <div class="hero-actions">
+          <a
+            href="https://api.whatsapp.com/send?phone=376331785&text=Hola%20Freddy%2C%20quiero%20reservar%20una%20clase%20de%20prueba."
+            class="btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Reservar clase de prueba
+          </a>
+          <a href="/horarios-precios/" class="btn outline">
+            Ver horarios y precios
+          </a>
+        </div>
+      </div>
+
+      <!-- Scroll progress bar -->
+      <div class="scroll-progress" aria-hidden="true"></div>
+    </section>
+
+    <!-- Separador decorativo -->
+    <div class="section-divider"></div>
+
+    <!-- Estadísticas -->
+    <section class="stats-section py-4">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-number" data-target="18">0</span>
+            <span class="stat-label">Años formando luchadores</span>
+            <div class="stat-flash"></div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="400" data-prefix="+">+0</span>
+            <span class="stat-label">Alumnos entrenados</span>
+            <div class="stat-flash"></div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">2007</span>
+            <span class="stat-label">Fundación del club</span>
+            <div class="stat-flash"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Separador decorativo -->
+    <div class="section-divider dark"></div>
+
+    <!-- Disciplinas -->
+    <section class="disciplinas py-5">
+      <div class="container">
+        <h2 class="text-center mb-3">Servicios</h2>
+
+        <div class="cards-grid">
+          <div class="card discipline-card">
+            <div class="card-image">
+              <Image src={boxingImg} alt="Boxeo en Andorra para todos los niveles" width={600} height={400} />
+            </div>
+            <div class="card-content">
+              <h3>Boxeo Andorra</h3>
+              <p>Boxeo para todos los niveles, centrado en técnica y condición física. Aprende guardia, desplazamientos, jab, cross, ganchos y uppers en el mejor club de boxeo en Andorra.</p>
+              <a href="/disciplinas/boxeo/" class="btn outline mt-2">Más información</a>
+            </div>
+          </div>
+
+          <div class="card discipline-card">
+            <div class="card-image">
+              <Image src={kickImg} alt="Kick Boxing K-1 en Andorra" width={600} height={400} />
+            </div>
+            <div class="card-content">
+              <h3>Kick Boxing / K-1</h3>
+              <p>Deporte de contacto de ataque y defensa, donde usamos los puños y las piernas. Aprende combinaciones, low kicks y rodillas en nuestras clases de kick boxing en Andorra.</p>
+              <a href="/disciplinas/k1/" class="btn outline mt-2">Más información</a>
+            </div>
+          </div>
+
+          <div class="card discipline-card">
+            <div class="card-image">
+              <Image src={muaythaiImg} alt="Muay Thai en Andorra" width={600} height={400} />
+            </div>
+            <div class="card-content">
+              <h3>Muay Thai Andorra</h3>
+              <p>Arte milenario procedente de Tailandia, también conocido como la lucha de las 8 armas: Puños, codos, rodillas y patadas. Entrena muay thai en Andorra con un campeón.</p>
+              <a href="/disciplinas/muay-thai/" class="btn outline mt-2">Más información</a>
+            </div>
+          </div>
+
+          <div class="card discipline-card personal-training">
+            <div class="card-content-full">
+              <h3>Clases Privadas</h3>
+              <p><strong>Entrenador Personal en Andorra</strong></p>
+              <p>Entrena donde y cuando quieras. Más de 30 años ayudando a personas a conseguir sus objetivos.</p>
+              <p class="highlight">La experiencia a tu alcance.</p>
+              <a href="/contacto/" class="btn mt-2">Solicitar información</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Separador decorativo -->
+    <div class="section-divider dark"></div>
+
+    <!-- Club -->
+    <section class="club py-5">
+      <div class="container">
+        <div class="club-grid">
+          <div class="club-image">
+            <Image src={trainerImg} alt="Alfred Freddy Calero - Entrenador de boxeo, kick boxing y muay thai en Andorra" width={500} height={500} class="trainer-img" />
+          </div>
+          <div class="club-content">
+            <h2>CLUB K-1 ANDORRA</h2>
+            <p class="club-year">(DESDE 2007) LA EXPERIENCIA A TU ALCANCE</p>
+            <p>Somos un equipo y una familia donde la intensidad se mezcla con la diversión y el compañerismo. Desde principiantes hasta competidores, aquí todos tienen su sitio para crecer dentro y fuera del ring.</p>
+            <p><strong>Alfred "Freddy" Calero</strong>, campeón de Europa y España con más de 30 años de experiencia, te guía en tu camino hacia la mejora técnica y física. Un entrenador con titulaciones nacionales e internacionales en boxeo, kick boxing, muay thai y krav maga.</p>
+            <a href="/sobre-mi/" class="btn mt-2">Conoce al entrenador</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Separador decorativo -->
+    <div class="section-divider"></div>
+
+    <!-- Testimonios - Rounds del Ring -->
+    <section class="testimonios py-5">
+      <div class="container">
+        <h2 class="text-center mb-3">Lo que dicen nuestros guerreros</h2>
+
+        <div class="testimonios-ring">
+          <div class="ring-center">
+            <svg class="ring-lines" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="200" cy="200" r="180" fill="none" stroke="rgba(225, 6, 0, 0.1)" stroke-width="1"/>
+              <circle cx="200" cy="200" r="120" fill="none" stroke="rgba(205, 164, 52, 0.1)" stroke-width="1"/>
+            </svg>
+          </div>
+
+          <div class="testimonios-grid">
+            <div class="card testimonial" data-round="1">
+              <div class="round-badge">ROUND 1</div>
+              <div class="testimonial-avatar">
+                <Image src={testimonio1Img} alt="Rosa Maria Soriano Vega" width={80} height={80} />
+              </div>
+              <p>"Nuestro hijo empezó con 10 añitos y ahora ya con 15, en plena adolescencia, vemos y corroboramos que aparte de aprender las técnicas de boxeo, kick boxing... Aprenden valores, y sobretodo humildad, que a veces se pasan por alto en otros gyms. Aquí la verdad que de esto van sobraos."</p>
+              <cite>— Rosa Maria Soriano Vega</cite>
+            </div>
+
+            <div class="card testimonial" data-round="2">
+              <div class="round-badge">ROUND 2</div>
+              <div class="testimonial-avatar">
+                <Image src={testimonio2Img} alt="Xavier T.M" width={80} height={80} />
+              </div>
+              <p>"Gimnasio tradicional con buen ambiente y un equipo de entrenamiento de alta calidad. El entrenador tiene mucha experiencia y sabe transmitirla y motivar a la gente. Nosotros vamos toda la familia y encantados!!"</p>
+              <cite>— Xavier T.M</cite>
+            </div>
+
+            <div class="card testimonial" data-round="3">
+              <div class="round-badge">ROUND 3</div>
+              <div class="testimonial-avatar">
+                <Image src={testimonio3Img} alt="Fuad Chouni" width={80} height={80} />
+              </div>
+              <p>"Sin ninguna duda el mejor Club de Boxeo y Muay Thai de Andorra, entrenar con un excampeón de Europa y España, como Freddy uno aprende muchísimo y marca la diferencia, de todo lo que he aprendido le estaré siempre agradecido."</p>
+              <cite>— Fuad Chouni</cite>
+            </div>
+
+            <div class="card testimonial" data-round="4">
+              <div class="round-badge">ROUND 4</div>
+              <div class="testimonial-avatar">
+                <Image src={testimonio2Img} alt="Jacobo Peña" width={80} height={80} />
+              </div>
+              <p>"El mejor entrenador de Andorra con diferencia, muy buen ambiente y profesionalidad, mis dieces."</p>
+              <cite>— Jacobo Peña</cite>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-final py-5">
+      <div class="container text-center">
+        <h2>Empieza hoy</h2>
+        <p class="mb-2">Reserva tu clase de prueba</p>
+        <div class="cta-actions">
+          <a href="tel:+376331785" class="btn">+376 331 785</a>
+          <a
+            href="https://api.whatsapp.com/send?phone=376331785&text=Hola%20Freddy%2C%20quiero%20reservar%20una%20clase%20de%20prueba."
+            class="btn outline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  main {
+    margin-top: 0;
+  }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/src/assets/images/COPIA-SLIDER-scaled.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: grayscale(30%) brightness(0.75);
+    z-index: 0;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(11, 13, 15, 0.45), rgba(11, 13, 15, 0.65));
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 900px;
+    padding: 2rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+    animation: fadeInUp 1s ease-out;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    margin-bottom: 1rem;
+    color: var(--gold);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    animation: fadeInUp 1s ease-out 0.2s both;
+  }
+
+  .hero-tagline {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    margin-bottom: 2rem;
+    color: var(--fg);
+    font-style: italic;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    animation: fadeInUp 1s ease-out 0.3s both;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 1s ease-out 0.5s both;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Cards Grid */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 1200px) {
+    .cards-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .cards-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .discipline-card {
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .discipline-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: linear-gradient(180deg, var(--accent), var(--gold));
+    transition: height 0.4s ease;
+    z-index: 10;
+  }
+
+  .discipline-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: width 0.4s ease;
+    z-index: 10;
+  }
+
+  .discipline-card:hover::before {
+    height: 100%;
+  }
+
+  .discipline-card:hover::after {
+    width: 40px;
+  }
+
+  .card-image {
+    position: relative;
+    overflow: hidden;
+    height: 220px;
+  }
+
+  .card-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(11, 13, 15, 0.8) 100%);
+    opacity: 0.6;
+    transition: opacity 0.4s ease;
+  }
+
+  .discipline-card:hover .card-image::after {
+    opacity: 0.3;
+  }
+
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(50%) brightness(0.8);
+    transition: all 0.5s ease;
+  }
+
+  .discipline-card:hover .card-image img {
+    filter: grayscale(0%) brightness(1);
+    transform: scale(1.08);
+  }
+
+  .card-content {
+    padding: 1.75rem;
+    position: relative;
+  }
+
+  .card-content h3 {
+    position: relative;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-content h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+  }
+
+  .discipline-card:hover .card-content h3::after {
+    width: 50px;
+  }
+
+  /* Personal Training Card */
+  .personal-training {
+    background: linear-gradient(135deg, var(--accent) 0%, rgba(225, 6, 0, 0.8) 100%);
+    border: 2px solid var(--gold);
+    box-shadow:
+      0 0 30px rgba(225, 6, 0, 0.4),
+      0 0 60px rgba(205, 164, 52, 0.2),
+      inset 0 0 60px rgba(205, 164, 52, 0.1);
+    position: relative;
+    overflow: visible;
+  }
+
+  .personal-training::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 50px;
+    height: 50px;
+    border-top: 3px solid var(--gold);
+    border-left: 3px solid var(--gold);
+    opacity: 0.8;
+  }
+
+  .personal-training::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 50px;
+    height: 50px;
+    border-bottom: 3px solid var(--gold);
+    border-right: 3px solid var(--gold);
+    opacity: 0.8;
+  }
+
+  .personal-training:hover {
+    box-shadow:
+      0 0 40px rgba(225, 6, 0, 0.6),
+      0 0 80px rgba(205, 164, 52, 0.3),
+      inset 0 0 80px rgba(205, 164, 52, 0.15);
+    transform: translateY(-6px) scale(1.02);
+  }
+
+  .card-content-full {
+    padding: 2.5rem 2rem;
+    text-align: center;
+    position: relative;
+  }
+
+  .personal-training h3 {
+    color: var(--fg);
+    font-size: 1.9rem;
+    margin-bottom: 1.25rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.05em;
+  }
+
+  .personal-training p {
+    color: rgba(246, 247, 249, 0.95);
+    margin-bottom: 0.85rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .personal-training .highlight {
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 15px rgba(205, 164, 52, 0.5);
+    margin-top: 1rem;
+  }
+
+  /* Club */
+  .club {
+    background: var(--card);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .club::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(225, 6, 0, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .club-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .club-image {
+    position: relative;
+  }
+
+  .club-image::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--gold);
+    opacity: 0.3;
+    z-index: -1;
+  }
+
+  .club-image::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--accent);
+    opacity: 0.3;
+    z-index: -1;
+  }
+
+  .club-image :global(.trainer-img) {
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(225, 6, 0, 0.3);
+    border: 2px solid var(--gold);
+    filter: grayscale(20%);
+    transition: all 0.4s ease;
+  }
+
+  .club-image:hover :global(.trainer-img) {
+    filter: grayscale(0%);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(225, 6, 0, 0.5);
+  }
+
+  .club-content h2 {
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 8px rgba(225, 6, 0, 0.3);
+  }
+
+  .club-year {
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  .club-content p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  /* Testimonios */
+  .testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem 3rem;
+    margin-top: 3rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 768px) {
+    .testimonios-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem 2rem;
+    }
+  }
+
+  .testimonial {
+    text-align: center;
+    position: relative;
+    padding-top: 3rem;
+  }
+
+  .testimonial::before {
+    content: '❝';
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    font-size: 3rem;
+    color: var(--gold);
+    opacity: 0.15;
+    font-family: Georgia, serif;
+    line-height: 1;
+  }
+
+  .testimonial-avatar {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--gold);
+    box-shadow: 0 4px 12px rgba(205, 164, 52, 0.4);
+    transition: all 0.3s ease;
+  }
+
+  .testimonial:hover .testimonial-avatar {
+    border-color: var(--accent);
+    box-shadow: 0 6px 20px rgba(225, 6, 0, 0.5);
+    transform: translateX(-50%) scale(1.05);
+  }
+
+  .testimonial-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .testimonial p {
+    font-style: italic;
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+
+  .testimonial cite {
+    display: block;
+    color: var(--gold);
+    font-weight: 600;
+    font-style: normal;
+    font-size: 0.95rem;
+  }
+
+  /* CTA Final */
+  .cta-final {
+    background: linear-gradient(135deg, var(--card) 0%, rgba(225, 6, 0, 0.15) 100%);
+    position: relative;
+  }
+
+  .cta-final::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('/src/assets/images/11A_00015.jpeg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.08;
+    filter: grayscale(100%);
+  }
+
+  .cta-final .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+
+  /* Section Dividers - Estilo Premium Artes Marciales */
+  .section-divider {
+    position: relative;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .section-divider::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+      transparent,
+      rgba(225, 6, 0, 0.3) 20%,
+      var(--gold) 50%,
+      rgba(225, 6, 0, 0.3) 80%,
+      transparent
+    );
+  }
+
+  .section-divider::after {
+    content: '◆';
+    position: relative;
+    z-index: 1;
+    color: var(--gold);
+    font-size: 1.2rem;
+    background: var(--bg);
+    padding: 0 2rem;
+    text-shadow: 0 0 20px rgba(205, 164, 52, 0.6);
+  }
+
+  .section-divider.dark {
+    background: var(--card);
+  }
+
+  .section-divider.dark::after {
+    background: var(--card);
+  }
+
+  /* Títulos de sección con detalle */
+  h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 1rem;
+  }
+
+  h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--gold));
+    box-shadow: 0 2px 10px rgba(225, 6, 0, 0.4);
+  }
+
+  /* Servicios section con pattern de fondo */
+  .disciplinas {
+    position: relative;
+  }
+
+  .disciplinas::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(225, 6, 0, 0.02) 35px, rgba(225, 6, 0, 0.02) 70px);
+    pointer-events: none;
+  }
+
+  /* Testimonios con patrón sutil */
+  .testimonios {
+    position: relative;
+  }
+
+  .testimonios::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 20% 50%, rgba(225, 6, 0, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(205, 164, 52, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  @media (max-width: 768px) {
+    .hero::before {
+      background-attachment: scroll;
+    }
+
+    .club-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .club-image {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .section-divider {
+      height: 60px;
+    }
+
+    h2::after {
+      width: 40px;
+      height: 2px;
+    }
+  }
+
+  /* ===== NUEVOS ESTILOS INNOVADORES ===== */
+
+  /* Frase motivacional en hero */
+  .hero-phrase {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    font-style: italic;
+    margin: 1.5rem 0;
+    height: clamp(3rem, 7vw, 5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .phrase-part {
+    position: absolute;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--gold);
+    text-shadow: 0 0 30px rgba(205, 164, 52, 0.6);
+  }
+
+  .phrase-part.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .phrase-part.exit {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  .phrase-part[data-part="2"] {
+    color: var(--accent);
+    text-shadow: 0 0 30px rgba(225, 6, 0, 0.6);
+  }
+
+  /* Soporte prefers-reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    .phrase-part {
+      transition: none;
+    }
+
+    .hero-phrase {
+      animation: none;
+    }
+  }
+
+  /* Scroll progress bar */
+  .scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--gold));
+    width: 0;
+    z-index: 9998;
+    transition: width 0.1s ease-out;
+    box-shadow: 0 0 10px rgba(225, 6, 0, 0.6);
+  }
+
+  /* Estadísticas */
+  .stats-section {
+    background: var(--card);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .stat-item {
+    text-align: center;
+    position: relative;
+    padding: 2rem 1rem;
+  }
+
+  .stat-number {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 900;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    display: block;
+    font-size: 0.95rem;
+    color: rgba(246, 247, 249, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 0.5rem;
+  }
+
+  .stat-flash {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(225, 6, 0, 0.3) 0%, transparent 70%);
+    opacity: 0;
+    animation: flashImpact 0.3s ease-out;
+    pointer-events: none;
+  }
+
+  @keyframes flashImpact {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+  }
+
+  /* Cards con vibración sutil */
+  .discipline-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+  }
+
+  .discipline-card:hover {
+    transform: translateY(-8px) rotateX(2deg) rotateY(2deg);
+    animation: cardShake 0.3s ease-in-out infinite;
+  }
+
+  @keyframes cardShake {
+    0%, 100% { transform: translateY(-8px) translateX(0) rotateX(2deg) rotateY(2deg); }
+    25% { transform: translateY(-8px) translateX(-3px) rotateX(2deg) rotateY(2deg); }
+    75% { transform: translateY(-8px) translateX(3px) rotateX(2deg) rotateY(2deg); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .discipline-card:hover {
+      transform: translateY(-8px);
+      animation: none;
+    }
+  }
+
+  /* Testimonios con ring */
+  .testimonios-ring {
+    position: relative;
+  }
+
+  .ring-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .ring-lines {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+  }
+
+  .testimonios-grid {
+    position: relative;
+    z-index: 1;
+  }
+
+  .round-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--accent);
+    color: var(--fg);
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 0.5rem 1rem;
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%);
+    z-index: 10;
+  }
+
+  /* Responsive Stats */
+  @media (max-width: 768px) {
+    .stats-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .ring-center {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  // ===== ANIMACIÓN DE FRASE EN HERO =====
+  const phraseParts = document.querySelectorAll('.phrase-part');
+  let currentPartIndex = 0;
+
+  // Respetar prefers-reduced-motion
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!prefersReducedMotion && phraseParts.length > 0) {
+    function cyclePhrase() {
+      const current = phraseParts[currentPartIndex];
+      current.classList.remove('active');
+      current.classList.add('exit');
+
+      setTimeout(() => {
+        current.classList.remove('exit');
+      }, 800);
+
+      currentPartIndex = (currentPartIndex + 1) % phraseParts.length;
+      const next = phraseParts[currentPartIndex];
+      next.classList.add('active');
+    }
+
+    // Cambiar cada 3 segundos (dar más tiempo a la frase completa)
+    setInterval(cyclePhrase, 3000);
+  }
+
+  // ===== SCROLL PROGRESS BAR =====
+  const progressBar = document.querySelector('.scroll-progress');
+
+  function updateProgressBar() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const progress = (scrollTop / scrollHeight) * 100;
+
+    if (progressBar) {
+      progressBar.style.width = `${progress}%`;
+    }
+  }
+
+  window.addEventListener('scroll', updateProgressBar);
+  updateProgressBar();
+
+  // ===== CONTADOR ANIMADO DE ESTADÍSTICAS =====
+  const statNumbers = document.querySelectorAll('.stat-number[data-target]');
+  let statsAnimated = false;
+
+  function animateStats() {
+    if (statsAnimated) return;
+
+    statNumbers.forEach((stat) => {
+      const target = parseInt(stat.getAttribute('data-target') || '0');
+      const prefix = stat.getAttribute('data-prefix') || '';
+      const duration = 2000; // 2 segundos
+      const increment = target / (duration / 16); // 60 FPS
+      let current = 0;
+
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+
+          // Flash de impacto al finalizar
+          const flash = stat.parentElement?.querySelector('.stat-flash');
+          if (flash) {
+            flash.style.animation = 'none';
+            setTimeout(() => {
+              flash.style.animation = 'flashImpact 0.3s ease-out';
+            }, 10);
+          }
+        }
+        stat.textContent = prefix + Math.floor(current).toString();
+      }, 16);
+    });
+
+    statsAnimated = true;
+  }
+
+  // Observar cuando las stats entran en viewport
+  const statsSection = document.querySelector('.stats-section');
+  if (statsSection) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateStats();
+        }
+      });
+    }, { threshold: 0.5 });
+
+    observer.observe(statsSection);
+  }
+
+  // ===== ACCESIBILIDAD: NAVEGACIÓN POR TECLADO =====
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Tab') {
+      document.body.classList.add('keyboard-nav');
+    }
+  });
+
+  document.addEventListener('mousedown', () => {
+    document.body.classList.remove('keyboard-nav');
+  });
+</script>
