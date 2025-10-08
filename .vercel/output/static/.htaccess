@@ -1,0 +1,19 @@
+RewriteEngine On
+RewriteBase /
+
+# Allow CSS and JS files
+<FilesMatch "\.(css|js|webp|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$">
+  Header set Cache-Control "max-age=31536000, public"
+</FilesMatch>
+
+# Ensure proper MIME types
+AddType text/css .css
+AddType application/javascript .js
+AddType image/webp .webp
+
+# Allow access to _astro directory
+<IfModule mod_rewrite.c>
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ /$1 [L]
+</IfModule>
