@@ -260,9 +260,9 @@ Actualización completa del sitio web de Freddy Boxing a Club K-1 Andorra con re
    ```
 
 ### 2. Canonical URLs
-- Actualmente usan freddyboxing.com
-- Actualizar cuando el dominio final esté definido
-- Buscar y reemplazar: `https://freddyboxing.com/` → URL definitiva
+- ✅ **Actualizado:** freddyboxing.com → k-1andorra.com
+- **Dominio definitivo:** https://k-1andorra.com/
+- Actualizado en 9 páginas (index, sobre-mi, contacto, disciplinas, galeria, horarios-precios)
 
 ---
 
@@ -382,9 +382,19 @@ kill [PID]
 
 ---
 
-## 🐛 Issues Conocidos
+## 🐛 Issues Conocidos y Soluciones
 
-**Ninguno** - Todos los cambios implementados y testeados correctamente.
+### ~~Títulos no centrados en páginas de disciplinas~~ ✅ RESUELTO
+**Problema:** Los h2 con clase `.text-center` no se centraban correctamente.
+
+**Causa:** Estilos globales en `index.astro` establecían `display: inline-block` para todos los h2.
+
+**Solución aplicada (2026-01-22):**
+- Modificado `src/pages/index.astro` líneas 859-875
+- Cambiado selectores globales `h2` a `.text-center h2` y `h2.text-center`
+- Cambiado `display: inline-block` a `display: block`
+- Añadido `text-align: center` explícitamente
+- Ahora los títulos se centran correctamente en todas las landing pages
 
 ---
 
@@ -426,6 +436,26 @@ kill [PID]
 
 ---
 
-**Última actualización:** 2026-01-21
-**Versión:** 2.0
+---
+
+## 📝 Actualizaciones Post-Lanzamiento
+
+### 2026-01-22
+**Commit:** d8d93f3
+
+**Cambios:**
+1. **Fix títulos centrados:**
+   - Corregido problema de h2 no centrados en páginas de disciplinas
+   - Modificado `index.astro` para aplicar estilos solo a h2 con clase `.text-center`
+   - Cambiado de `display: inline-block` a `display: block`
+
+2. **Actualización de dominio:**
+   - Canonical URLs actualizadas: `freddyboxing.com` → `k-1andorra.com`
+   - 9 archivos actualizados (todas las páginas del sitio)
+
+---
+
+**Última actualización:** 2026-01-22
+**Versión:** 2.1
 **Estado:** ✅ Producción Ready (pending Formspree config)
+**Dominio:** https://k-1andorra.com/
