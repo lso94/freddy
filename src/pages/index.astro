@@ -16,8 +16,8 @@ import testimonio1Img from '../assets/images/unnamed.png';
 import testimonio2Img from '../assets/images/unnamed-1.png';
 import testimonio3Img from '../assets/images/Captura-de-pantalla-2024-06-24-193839.png';
 
-const title = 'Kick Boxing, K-1, Muay Thai y Boxeo en Andorra | Club K1 Andorra';
-const description = 'Vive la experiencia en K1 Andorra. Kick boxing, boxeo y muay thai para todos los niveles. Un club, una familia, una pasión: la lucha. Desde 2007.';
+const title = 'Club K-1 Andorra – Boxeo, Kickboxing y Muay Thai en Andorra la Vella';
+const description = 'Entrenamientos de Boxeo, Kickboxing y Muay Thai para todos los niveles en Andorra la Vella. Ponte en forma, aprende técnica y supera tus límites en un ambiente profesional y motivador.';
 ---
 
 <BaseLayout title={title} description={description} canonical="https://freddyboxing.com/">
@@ -30,7 +30,8 @@ const description = 'Vive la experiencia en K1 Andorra. Kick boxing, boxeo y mua
     <section class="hero">
       <div class="hero-overlay"></div>
       <div class="hero-content container">
-        <h1>Boxeo, K-1 y Muay Thai en Andorra</h1>
+        <h1>Club K-1 Andorra</h1>
+        <p class="hero-subtitle">Boxeo, Kickboxing y Muay Thai en Andorra la Vella</p>
 
         <!-- Frase motivacional de Freddy -->
         <div class="hero-phrase" aria-hidden="true">
@@ -38,18 +39,18 @@ const description = 'Vive la experiencia en K1 Andorra. Kick boxing, boxeo y mua
           <span class="phrase-part" data-part="2">NO HAY GLORIA</span>
         </div>
 
-        <p class="hero-tagline">Un club, una familia, una pasión: la lucha.</p>
+        <p class="hero-tagline">Entrenamientos para todos los niveles. Ponte en forma, aprende técnica y supera tus límites en un ambiente profesional y motivador.</p>
         <div class="hero-actions">
           <a
-            href="https://api.whatsapp.com/send?phone=376331785&text=Hola%20Freddy%2C%20quiero%20reservar%20una%20clase%20de%20prueba."
+            href="https://api.whatsapp.com/send?phone=376331785&text=Hola%2C%20quiero%20reservar%20mi%20primera%20clase."
             class="btn"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Reservar clase de prueba
+            Reservar primera clase
           </a>
           <a href="/horarios-precios/" class="btn outline">
-            Ver horarios y precios
+            Ver horarios y tarifas
           </a>
         </div>
       </div>
@@ -87,10 +88,45 @@ const description = 'Vive la experiencia en K1 Andorra. Kick boxing, boxeo y mua
     <!-- Separador decorativo -->
     <div class="section-divider dark"></div>
 
+    <!-- Filosofía del Club -->
+    <section class="filosofia py-5">
+      <div class="container">
+        <h2 class="text-center mb-3">Un club, una familia y una pasión</h2>
+        <p class="filosofia-intro">Somos más que un gimnasio. En Club K-1 Andorra creamos comunidad a través del deporte de contacto, trabajando disciplina, técnica y respeto. Aquí entrenan principiantes, aficionados y competidores, todos compartiendo una misma pasión: la lucha.</p>
+
+        <div class="valores-grid">
+          <div class="valor-card">
+            <div class="valor-icon">🙏</div>
+            <h3>Respeto</h3>
+          </div>
+          <div class="valor-card">
+            <div class="valor-icon">⚡</div>
+            <h3>Disciplina</h3>
+          </div>
+          <div class="valor-card">
+            <div class="valor-icon">🤝</div>
+            <h3>Humildad</h3>
+          </div>
+          <div class="valor-card">
+            <div class="valor-icon">💪</div>
+            <h3>Esfuerzo</h3>
+          </div>
+          <div class="valor-card">
+            <div class="valor-icon">🔥</div>
+            <h3>Superación personal</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Separador decorativo -->
+    <div class="section-divider dark"></div>
+
     <!-- Disciplinas -->
     <section class="disciplinas py-5">
       <div class="container">
-        <h2 class="text-center mb-3">Servicios</h2>
+        <h2 class="text-center mb-3">¿En qué quieres entrenar?</h2>
+        <p class="section-intro">Ofrecemos varias disciplinas para que puedas elegir según tus objetivos físicos, técnicos o deportivos.</p>
 
         <div class="cards-grid">
           <div class="card discipline-card">
@@ -98,20 +134,20 @@ const description = 'Vive la experiencia en K1 Andorra. Kick boxing, boxeo y mua
               <Image src={boxingImg} alt="Boxeo en Andorra para todos los niveles" width={600} height={400} />
             </div>
             <div class="card-content">
-              <h3>Boxeo Andorra</h3>
-              <p>Boxeo para todos los niveles, centrado en técnica y condición física. Aprende guardia, desplazamientos, jab, cross, ganchos y uppers en el mejor club de boxeo en Andorra.</p>
-              <a href="/disciplinas/boxeo/" class="btn outline mt-2">Más información</a>
+              <h3>Boxeo</h3>
+              <p>Entrenamientos técnicos y físicos centrados en los puños, la defensa y la estrategia.</p>
+              <a href="/disciplinas/boxeo/" class="btn outline mt-2">Ver Boxeo</a>
             </div>
           </div>
 
           <div class="card discipline-card">
             <div class="card-image">
-              <Image src={kickImg} alt="Kick Boxing K-1 en Andorra" width={600} height={400} />
+              <Image src={kickImg} alt="Kickboxing en Andorra" width={600} height={400} />
             </div>
             <div class="card-content">
-              <h3>Kick Boxing / K-1</h3>
-              <p>Deporte de contacto de ataque y defensa, donde usamos los puños y las piernas. Aprende combinaciones, low kicks y rodillas en nuestras clases de kick boxing en Andorra.</p>
-              <a href="/disciplinas/k1/" class="btn outline mt-2">Más información</a>
+              <h3>Kickboxing</h3>
+              <p>Disciplina dinámica que mezcla puños y piernas con intensidad y control.</p>
+              <a href="/disciplinas/k1/" class="btn outline mt-2">Ver Kickboxing</a>
             </div>
           </div>
 
@@ -120,19 +156,17 @@ const description = 'Vive la experiencia en K1 Andorra. Kick boxing, boxeo y mua
               <Image src={muaythaiImg} alt="Muay Thai en Andorra" width={600} height={400} />
             </div>
             <div class="card-content">
-              <h3>Muay Thai Andorra</h3>
-              <p>Arte milenario procedente de Tailandia, también conocido como la lucha de las 8 armas: Puños, codos, rodillas y patadas. Entrena muay thai en Andorra con un campeón.</p>
-              <a href="/disciplinas/muay-thai/" class="btn outline mt-2">Más información</a>
+              <h3>Muay Thai</h3>
+              <p>Arte marcial tradicional conocido como "el arte de las ocho armas": puños, piernas, codos y rodillas.</p>
+              <a href="/disciplinas/muay-thai/" class="btn outline mt-2">Ver Muay Thai</a>
             </div>
           </div>
 
           <div class="card discipline-card personal-training">
             <div class="card-content-full">
               <h3>Clases Privadas</h3>
-              <p><strong>Entrenador Personal en Andorra</strong></p>
-              <p>Entrena donde y cuando quieras. Más de 30 años ayudando a personas a conseguir sus objetivos.</p>
-              <p class="highlight">La experiencia a tu alcance.</p>
-              <a href="/contacto/" class="btn mt-2">Solicitar información</a>
+              <p>Entrenamientos individuales o en grupos reducidos adaptados a tus objetivos.</p>
+              <a href="/contacto/" class="btn mt-2">Ver Clases Privadas</a>
             </div>
           </div>
         </div>
@@ -142,19 +176,17 @@ const description = 'Vive la experiencia en K1 Andorra. Kick boxing, boxeo y mua
     <!-- Separador decorativo -->
     <div class="section-divider dark"></div>
 
-    <!-- Club -->
+    <!-- Entrenador -->
     <section class="club py-5">
       <div class="container">
         <div class="club-grid">
           <div class="club-image">
-            <Image src={trainerImg} alt="Alfred Freddy Calero - Entrenador de boxeo, kick boxing y muay thai en Andorra" width={500} height={500} class="trainer-img" />
+            <Image src={trainerImg} alt="Alfred Freddy Calero - Entrenador de boxeo, kickboxing y muay thai en Andorra" width={500} height={500} class="trainer-img" />
           </div>
           <div class="club-content">
-            <h2>CLUB K-1 ANDORRA</h2>
-            <p class="club-year">(DESDE 2007) LA EXPERIENCIA A TU ALCANCE</p>
-            <p>Somos un equipo y una familia donde la intensidad se mezcla con la diversión y el compañerismo. Desde principiantes hasta competidores, aquí todos tienen su sitio para crecer dentro y fuera del ring.</p>
-            <p><strong>Alfred "Freddy" Calero</strong>, campeón de Europa y España con más de 30 años de experiencia, te guía en tu camino hacia la mejora técnica y física. Un entrenador con titulaciones nacionales e internacionales en boxeo, kick boxing, muay thai y krav maga.</p>
-            <a href="/sobre-mi/" class="btn mt-2">Conoce al entrenador</a>
+            <h2>Entrena con Alfred "Freddy" Calero</h2>
+            <p>Entrenador con más de 30 años de experiencia en deportes de contacto y excompetidor con títulos nacionales e internacionales. Su labor actual se centra en formar alumnos de todas las edades y niveles.</p>
+            <a href="/sobre-mi/" class="btn mt-2">Ver más sobre el entrenador</a>
           </div>
         </div>
       </div>
@@ -163,10 +195,46 @@ const description = 'Vive la experiencia en K1 Andorra. Kick boxing, boxeo y mua
     <!-- Separador decorativo -->
     <div class="section-divider"></div>
 
+    <!-- Beneficios -->
+    <section class="beneficios py-5">
+      <div class="container">
+        <h2 class="text-center mb-3">Beneficios de entrenar con nosotros</h2>
+        <div class="beneficios-grid">
+          <div class="beneficio-item">
+            <span class="beneficio-check">✔</span>
+            <span>Mejora cardiovascular</span>
+          </div>
+          <div class="beneficio-item">
+            <span class="beneficio-check">✔</span>
+            <span>Coordinación y equilibrio</span>
+          </div>
+          <div class="beneficio-item">
+            <span class="beneficio-check">✔</span>
+            <span>Fuerza y resistencia</span>
+          </div>
+          <div class="beneficio-item">
+            <span class="beneficio-check">✔</span>
+            <span>Confianza y seguridad personal</span>
+          </div>
+          <div class="beneficio-item">
+            <span class="beneficio-check">✔</span>
+            <span>Gestión del estrés</span>
+          </div>
+          <div class="beneficio-item">
+            <span class="beneficio-check">✔</span>
+            <span>Cultura deportiva y disciplina</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Separador decorativo -->
+    <div class="section-divider dark"></div>
+
     <!-- Testimonios - Rounds del Ring -->
     <section class="testimonios py-5">
       <div class="container">
-        <h2 class="text-center mb-3">Lo que dicen nuestros guerreros</h2>
+        <h2 class="text-center mb-3">Lo que dicen nuestros alumnos</h2>
 
         <div class="testimonios-ring">
           <div class="ring-center">
@@ -217,21 +285,45 @@ const description = 'Vive la experiencia en K1 Andorra. Kick boxing, boxeo y mua
       </div>
     </section>
 
-    <!-- CTA Final -->
+    <!-- CTA Final con Formulario -->
     <section class="cta-final py-5">
-      <div class="container text-center">
-        <h2>Empieza hoy</h2>
-        <p class="mb-2">Reserva tu clase de prueba</p>
-        <div class="cta-actions">
-          <a href="tel:+376331785" class="btn">+376 331 785</a>
-          <a
-            href="https://api.whatsapp.com/send?phone=376331785&text=Hola%20Freddy%2C%20quiero%20reservar%20una%20clase%20de%20prueba."
-            class="btn outline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            WhatsApp
-          </a>
+      <div class="container">
+        <div class="contacto-card">
+          <div class="contacto-header">
+            <h2>Tu primera clase te está esperando</h2>
+            <p>Completa el formulario y te contactamos para reservar tu clase de prueba sin compromiso</p>
+          </div>
+          <form class="contacto-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" name="nombre" placeholder="Nombre *" required>
+              </div>
+              <div class="form-group">
+                <input type="email" name="email" placeholder="Email *" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <input type="tel" name="telefono" placeholder="Teléfono *" required>
+              </div>
+              <div class="form-group">
+                <select name="disciplina" required>
+                  <option value="">Disciplina de interés *</option>
+                  <option value="boxeo">Boxeo</option>
+                  <option value="kickboxing">Kickboxing</option>
+                  <option value="muaythai">Muay Thai</option>
+                  <option value="nose">No estoy seguro/a</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <textarea name="mensaje" placeholder="Mensaje (opcional)" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-submit">
+              Solicitar Clase Gratuita
+            </button>
+            <p class="form-note">* Campos obligatorios. No compartimos tu información.</p>
+          </form>
         </div>
       </div>
     </section>
@@ -292,11 +384,12 @@ const description = 'Vive la experiencia en K1 Andorra. Kick boxing, boxeo y mua
   }
 
   .hero-subtitle {
-    font-size: clamp(1.25rem, 3vw, 2rem);
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
     margin-bottom: 1rem;
     color: var(--gold);
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
     animation: fadeInUp 1s ease-out 0.2s both;
+    font-weight: 600;
   }
 
   .hero-tagline {
@@ -1039,6 +1132,290 @@ const description = 'Vive la experiencia en K1 Andorra. Kick boxing, boxeo y mua
 
     .ring-center {
       display: none;
+    }
+  }
+
+  /* Filosofía del Club */
+  .filosofia {
+    background: var(--card);
+    position: relative;
+  }
+
+  .filosofia-intro {
+    text-align: center;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: rgba(246, 247, 249, 0.9);
+    max-width: 900px;
+    margin: 0 auto 3rem;
+  }
+
+  .valores-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .valor-card {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    padding: 2rem 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .valor-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--gold));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .valor-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .valor-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(205, 164, 52, 0.2);
+  }
+
+  .valor-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+
+  .valor-card:hover .valor-icon {
+    filter: grayscale(0%);
+  }
+
+  .valor-card h3 {
+    color: var(--fg);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .section-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: rgba(246, 247, 249, 0.85);
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+  }
+
+  @media (max-width: 1024px) {
+    .valores-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .valores-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .filosofia-intro {
+      font-size: 1.05rem;
+    }
+  }
+
+  /* Beneficios */
+  .beneficios {
+    background: var(--bg);
+  }
+
+  .beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .beneficio-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+    color: rgba(246, 247, 249, 0.9);
+    padding: 1rem;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+
+  .beneficio-item:hover {
+    border-color: var(--accent);
+    transform: translateX(8px);
+    box-shadow: 0 4px 15px rgba(225, 6, 0, 0.2);
+  }
+
+  .beneficio-check {
+    color: var(--gold);
+    font-size: 1.5rem;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .beneficios-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .beneficios-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .beneficio-item {
+      font-size: 1rem;
+    }
+  }
+
+  /* Formulario de Contacto Rápido */
+  .contacto-rapido {
+    background: var(--bg);
+  }
+
+  .contacto-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--card);
+    border: 2px solid var(--line);
+    padding: 3rem;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .contacto-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--gold));
+  }
+
+  .contacto-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .contacto-header h2 {
+    color: var(--fg);
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .contacto-header p {
+    color: rgba(246, 247, 249, 0.8);
+    font-size: 1.05rem;
+  }
+
+  .contacto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacto-form input,
+  .contacto-form select,
+  .contacto-form textarea {
+    width: 100%;
+    padding: 1rem;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    color: var(--fg);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .contacto-form input:focus,
+  .contacto-form select:focus,
+  .contacto-form textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(205, 164, 52, 0.1);
+  }
+
+  .contacto-form select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23CDA434' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+  }
+
+  .contacto-form textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .btn-submit {
+    width: 100%;
+    padding: 1.25rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(225, 6, 0, 0.4);
+  }
+
+  .form-note {
+    text-align: center;
+    font-size: 0.85rem;
+    color: rgba(246, 247, 249, 0.6);
+    margin-top: -0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .contacto-card {
+      padding: 2rem 1.5rem;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .contacto-form input,
+    .contacto-form select,
+    .contacto-form textarea {
+      font-size: 16px; /* Prevent zoom on iOS */
     }
   }
 </style>

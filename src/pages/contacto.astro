@@ -4,27 +4,103 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
 
-const title = 'Contacto | Club K1 Andorra';
-const description = 'Contacta con nosotros para más información sobre nuestras clases de boxeo, kick boxing y muay thai en Andorra.';
+const title = 'Contacto | Club K-1 Andorra - Boxeo, Kickboxing y Muay Thai';
+const description = 'Contacta con el Club K-1 Andorra para reservar tu clase de prueba. Teléfono, WhatsApp, email y dirección en Andorra la Vella.';
 ---
 
 <BaseLayout title={title} description={description} canonical="https://freddyboxing.com/contacto/">
   <Header />
   <WhatsAppButton />
 
-  <main class="coming-soon-page">
-    <section class="coming-soon-hero">
+  <main class="contacto-page">
+    <section class="contacto-hero">
       <div class="hero-overlay"></div>
       <div class="hero-content container">
-        <h1>CONTACTO</h1>
-        <p class="coming-soon-text">PRÓXIMAMENTE</p>
-        <p class="coming-soon-description">Estamos preparando nuestro formulario de contacto.</p>
-        <p class="coming-soon-description">Mientras tanto, contáctanos por WhatsApp.</p>
-        <div class="cta-buttons">
-          <a href="https://api.whatsapp.com/send?phone=376331785&text=Hola%20Freddy%2C%20quiero%20más%20información." class="btn" target="_blank" rel="noopener noreferrer">
-            Contactar por WhatsApp
-          </a>
-          <a href="/" class="btn outline">Volver al inicio</a>
+        <h1>Contacto</h1>
+        <p class="hero-subtitle">Si quieres unirte al club, resolver dudas o reservar tu primera clase, puedes escribirnos o llamarnos.</p>
+      </div>
+    </section>
+
+    <section class="contacto-info py-5">
+      <div class="container">
+        <div class="contacto-grid">
+          <!-- Información de contacto -->
+          <div class="info-card">
+            <h2>Información de Contacto</h2>
+
+            <div class="info-item">
+              <div class="info-icon">📍</div>
+              <div class="info-content">
+                <h3>Dirección</h3>
+                <p>Centre, Camí Esportiu dels Serradells<br>AD500 Andorra la Vella<br>Andorra</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">📞</div>
+              <div class="info-content">
+                <h3>Teléfono / WhatsApp</h3>
+                <p><a href="tel:+376331785">+376 331 785</a></p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">✉️</div>
+              <div class="info-content">
+                <h3>Email</h3>
+                <p><a href="mailto:info@k1andorra.com">info@k1andorra.com</a></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="ctas-card">
+            <h2>¿Listo para empezar?</h2>
+            <p>Elige cómo prefieres contactarnos:</p>
+
+            <div class="cta-buttons">
+              <a
+                href="https://api.whatsapp.com/send?phone=376331785&text=Hola%2C%20quiero%20reservar%20mi%20primera%20clase."
+                class="btn btn-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="btn-icon">💬</span>
+                Reservar primera clase
+              </a>
+
+              <a
+                href="https://api.whatsapp.com/send?phone=376331785"
+                class="btn btn-whatsapp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="btn-icon">📱</span>
+                Abrir WhatsApp
+              </a>
+
+              <a
+                href="mailto:info@k1andorra.com"
+                class="btn btn-email"
+              >
+                <span class="btn-icon">✉️</span>
+                Enviar Email
+              </a>
+
+              <a href="/" class="btn btn-outline">
+                <span class="btn-icon">🏠</span>
+                Volver al Inicio
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Horario de atención (opcional) -->
+        <div class="horario-atencion">
+          <h3>Horario de Atención</h3>
+          <p>Lunes a Viernes: 7:00 - 22:00</p>
+          <p>Sábado: 9:00 - 14:00</p>
+          <p>Domingo: Cerrado</p>
         </div>
       </div>
     </section>
@@ -34,13 +110,14 @@ const description = 'Contacta con nosotros para más información sobre nuestras
 </BaseLayout>
 
 <style>
-  .coming-soon-page {
+  .contacto-page {
     background: var(--bg);
   }
 
-  .coming-soon-hero {
+  /* Hero */
+  .contacto-hero {
     position: relative;
-    min-height: 100vh;
+    min-height: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,42 +139,223 @@ const description = 'Contacta con nosotros para más información sobre nuestras
     z-index: 2;
     text-align: center;
     max-width: 800px;
+    padding: 2rem;
   }
 
-  .coming-soon-hero h1 {
+  .contacto-hero h1 {
     font-size: clamp(3rem, 8vw, 5rem);
     color: var(--fg);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     text-shadow: 0 4px 20px rgba(225, 6, 0, 0.5);
   }
 
-  .coming-soon-text {
-    font-family: 'Oswald', sans-serif;
-    font-size: clamp(2rem, 5vw, 3rem);
-    color: var(--gold);
-    margin-bottom: 2rem;
-    letter-spacing: 0.2em;
-    text-shadow: 0 2px 10px rgba(205, 164, 52, 0.5);
-  }
-
-  .coming-soon-description {
-    font-size: 1.25rem;
-    color: rgba(246, 247, 249, 0.8);
-    margin-bottom: 1rem;
+  .hero-subtitle {
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    color: rgba(246, 247, 249, 0.85);
     line-height: 1.6;
   }
 
-  .cta-buttons {
+  /* Contacto Info */
+  .contacto-info {
+    background: var(--bg);
+  }
+
+  .contacto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .info-card,
+  .ctas-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    padding: 2.5rem;
+    border-radius: 4px;
+  }
+
+  .info-card h2,
+  .ctas-card h2 {
+    color: var(--accent);
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .ctas-card p {
+    color: rgba(246, 247, 249, 0.8);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+
+  .info-item {
     display: flex;
     gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .info-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .info-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 3rem;
+    background: rgba(225, 6, 0, 0.1);
+    border-radius: 50%;
+  }
+
+  .info-content h3 {
+    color: var(--gold);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .info-content p {
+    color: rgba(246, 247, 249, 0.9);
+    line-height: 1.6;
+    font-size: 1.05rem;
+  }
+
+  .info-content a {
+    color: var(--fg);
+    transition: color 0.3s ease;
+  }
+
+  .info-content a:hover {
+    color: var(--accent);
+  }
+
+  /* CTAs */
+  .cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1.25rem 2rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  .btn-icon {
+    font-size: 1.3rem;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: var(--fg);
+    border: 2px solid var(--accent);
+  }
+
+  .btn-primary:hover {
+    background: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(225, 6, 0, 0.4);
+  }
+
+  .btn-whatsapp {
+    background: #25D366;
+    color: white;
+    border: 2px solid #25D366;
+  }
+
+  .btn-whatsapp:hover {
+    background: transparent;
+    color: #25D366;
+    transform: translateY(-2px);
+  }
+
+  .btn-email {
+    background: var(--gold);
+    color: var(--bg);
+    border: 2px solid var(--gold);
+  }
+
+  .btn-email:hover {
+    background: transparent;
+    color: var(--gold);
+    transform: translateY(-2px);
+  }
+
+  .btn-outline {
+    background: transparent;
+    border: 2px solid var(--line);
+    color: var(--fg);
+  }
+
+  .btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    transform: translateY(-2px);
+  }
+
+  /* Horario */
+  .horario-atencion {
+    text-align: center;
+    background: var(--card);
+    border: 1px solid var(--line);
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .horario-atencion h3 {
+    color: var(--gold);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .horario-atencion p {
+    color: rgba(246, 247, 249, 0.9);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .contacto-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
   }
 
   @media (max-width: 768px) {
-    .cta-buttons {
+    .contacto-hero {
+      min-height: 30vh;
+      margin-top: 70px;
+    }
+
+    .info-card,
+    .ctas-card {
+      padding: 1.5rem;
+    }
+
+    .info-item {
       flex-direction: column;
+      gap: 1rem;
+    }
+
+    .info-icon {
+      width: 50px;
+      height: 50px;
+      font-size: 2rem;
     }
   }
 </style>

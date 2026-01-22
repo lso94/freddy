@@ -1,0 +1,357 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+import { Image } from 'astro:assets';
+
+import boxingImg from '../../assets/images/IMG_2011_kick-andorra_fin-scaled.jpeg';
+import kickImg from '../../assets/images/11A_00015.jpeg';
+import muaythaiImg from '../../assets/images/IMG_1657-scaled.jpeg';
+
+const title = 'Servicios | Club K-1 Andorra - Boxeo, Kickboxing y Muay Thai';
+const description = 'Descubre nuestras disciplinas: Boxeo, Kickboxing y Muay Thai para todos los niveles. Clases privadas y grupales en Andorra la Vella.';
+---
+
+<BaseLayout title={title} description={description} canonical="https://freddyboxing.com/disciplinas/">
+  <Header />
+  <WhatsAppButton />
+
+  <main class="servicios-page">
+    <section class="servicios-hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <h1>Servicios</h1>
+        <p class="hero-subtitle">En Club K-1 Andorra ofrecemos disciplinas y programas de entrenamiento adaptados a distintos niveles, edades y objetivos.</p>
+      </div>
+    </section>
+
+    <section class="servicios-lista py-5">
+      <div class="container">
+        <div class="servicios-grid">
+          <!-- Boxeo -->
+          <div class="servicio-card">
+            <div class="servicio-image">
+              <Image src={boxingImg} alt="Boxeo en Andorra" width={600} height={400} />
+            </div>
+            <div class="servicio-content">
+              <h2>Boxeo</h2>
+              <p>Entrenamientos centrados en la técnica de los puños, los desplazamientos, la defensa y el trabajo estratégico. Ideal para ponerse en forma, aprender a combatir o preparar competición.</p>
+
+              <h3>Beneficios:</h3>
+              <ul>
+                <li>✔ Resistencia</li>
+                <li>✔ Coordinación</li>
+                <li>✔ Fuerza</li>
+                <li>✔ Seguridad personal</li>
+                <li>✔ Reducción del estrés</li>
+              </ul>
+
+              <a href="/disciplinas/boxeo/" class="btn mt-2">Más sobre Boxeo</a>
+            </div>
+          </div>
+
+          <!-- Kickboxing -->
+          <div class="servicio-card reverse">
+            <div class="servicio-image">
+              <Image src={kickImg} alt="Kickboxing en Andorra" width={600} height={400} />
+            </div>
+            <div class="servicio-content">
+              <h2>Kickboxing</h2>
+              <p>Deporte de contacto que combina técnica de puños y piernas con ritmo intenso. Entrenamiento accesible y progresivo con enfoque técnico y físico.</p>
+
+              <h3>Beneficios:</h3>
+              <ul>
+                <li>✔ Cardio intenso</li>
+                <li>✔ Flexibilidad</li>
+                <li>✔ Potencia</li>
+                <li>✔ Equilibrio</li>
+                <li>✔ Autoconfianza</li>
+              </ul>
+
+              <a href="/disciplinas/k1/" class="btn mt-2">Más sobre Kickboxing</a>
+            </div>
+          </div>
+
+          <!-- Muay Thai -->
+          <div class="servicio-card">
+            <div class="servicio-image">
+              <Image src={muaythaiImg} alt="Muay Thai en Andorra" width={600} height={400} />
+            </div>
+            <div class="servicio-content">
+              <h2>Muay Thai</h2>
+              <p>Arte marcial tradicional de Tailandia caracterizado por el uso de puños, piernas, rodillas y codos, además del clinch. Entrenamiento completo a nivel físico y mental.</p>
+
+              <h3>Beneficios:</h3>
+              <ul>
+                <li>✔ Entrenamiento completo</li>
+                <li>✔ Disciplina mental</li>
+                <li>✔ Resistencia extrema</li>
+                <li>✔ Técnica avanzada</li>
+                <li>✔ Cultura marcial</li>
+              </ul>
+
+              <a href="/disciplinas/muay-thai/" class="btn mt-2">Más sobre Muay Thai</a>
+            </div>
+          </div>
+
+          <!-- Clases Privadas -->
+          <div class="servicio-card clases-privadas reverse">
+            <div class="servicio-content-full">
+              <h2>Clases Privadas</h2>
+              <p class="destacado">Entrenamientos personales orientados a objetivos específicos: técnica, competición, pérdida de peso o acondicionamiento.</p>
+
+              <div class="caracteristicas">
+                <div class="caracteristica">
+                  <span class="caracteristica-icon">👤</span>
+                  <span>Atención 1-a-1</span>
+                </div>
+                <div class="caracteristica">
+                  <span class="caracteristica-icon">🎯</span>
+                  <span>Objetivos personalizados</span>
+                </div>
+                <div class="caracteristica">
+                  <span class="caracteristica-icon">⏰</span>
+                  <span>Horario flexible</span>
+                </div>
+                <div class="caracteristica">
+                  <span class="caracteristica-icon">📈</span>
+                  <span>Progresión rápida</span>
+                </div>
+              </div>
+
+              <a href="/contacto/" class="btn mt-2">Consultar clases privadas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .servicios-page {
+    background: var(--bg);
+  }
+
+  /* Hero */
+  .servicios-hero {
+    position: relative;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(225, 6, 0, 0.2) 0%, rgba(11, 13, 15, 0.95) 50%, rgba(205, 164, 52, 0.2) 100%);
+    overflow: hidden;
+    margin-top: 80px;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 30% 50%, rgba(225, 6, 0, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 70% 50%, rgba(205, 164, 52, 0.1) 0%, transparent 50%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 900px;
+    padding: 2rem;
+  }
+
+  .servicios-hero h1 {
+    font-size: clamp(3rem, 8vw, 5rem);
+    color: var(--fg);
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 20px rgba(225, 6, 0, 0.5);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    color: rgba(246, 247, 249, 0.85);
+    line-height: 1.6;
+  }
+
+  /* Servicios */
+  .servicios-lista {
+    background: var(--bg);
+  }
+
+  .servicios-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .servicio-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    background: var(--card);
+    border: 1px solid var(--line);
+    padding: 2rem;
+    transition: all 0.3s ease;
+  }
+
+  .servicio-card.reverse {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .servicio-card.reverse .servicio-image {
+    order: 2;
+  }
+
+  .servicio-card.reverse .servicio-content {
+    order: 1;
+  }
+
+  .servicio-card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 10px 40px rgba(205, 164, 52, 0.2);
+  }
+
+  .servicio-image {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .servicio-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(30%);
+    transition: all 0.5s ease;
+  }
+
+  .servicio-card:hover .servicio-image img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+  }
+
+  .servicio-content h2 {
+    color: var(--accent);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .servicio-content h3 {
+    color: var(--gold);
+    font-size: 1.2rem;
+    margin: 1.5rem 0 1rem;
+  }
+
+  .servicio-content p {
+    color: rgba(246, 247, 249, 0.9);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+  }
+
+  .servicio-content ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .servicio-content li {
+    color: rgba(246, 247, 249, 0.9);
+    font-size: 1rem;
+  }
+
+  /* Clases Privadas */
+  .clases-privadas {
+    background: linear-gradient(135deg, rgba(225, 6, 0, 0.1) 0%, var(--card) 100%);
+    border: 2px solid var(--accent);
+    grid-template-columns: 1fr;
+  }
+
+  .servicio-content-full {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .servicio-content-full h2 {
+    color: var(--accent);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .destacado {
+    font-size: 1.2rem;
+    color: rgba(246, 247, 249, 0.95);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+
+  .caracteristicas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .caracteristica {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .caracteristica-icon {
+    font-size: 2.5rem;
+  }
+
+  .caracteristica span:last-child {
+    font-size: 0.95rem;
+    color: rgba(246, 247, 249, 0.9);
+    text-align: center;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .servicio-card,
+    .servicio-card.reverse {
+      grid-template-columns: 1fr;
+    }
+
+    .servicio-card.reverse .servicio-image {
+      order: 1;
+    }
+
+    .servicio-card.reverse .servicio-content {
+      order: 2;
+    }
+
+    .caracteristicas {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .servicios-grid {
+      gap: 2rem;
+    }
+
+    .servicio-card {
+      padding: 1.5rem;
+    }
+
+    .servicio-content ul {
+      grid-template-columns: 1fr;
+    }
+
+    .caracteristicas {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+</style>

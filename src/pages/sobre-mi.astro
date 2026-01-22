@@ -12,8 +12,8 @@ import combatImg1 from '../assets/images/IMG_1657-scaled.jpeg';
 import combatImg2 from '../assets/images/IMG_2011_kick-andorra_fin-scaled.jpeg';
 import functionalImg from '../assets/images/13007147_1626683194318652_6297385222729411090_n.jpeg';
 
-const title = 'Alfred "Freddy" Calero | Campeón de Europa | Entrenador en Andorra';
-const description = 'Más de 30 años de experiencia en artes marciales. Campeón de Europa y España. Entrenador profesional de boxeo, kick boxing y muay thai en Andorra.';
+const title = 'Sobre mí – Alfred "Freddy" Calero | Campeón de Europa | Club K-1 Andorra';
+const description = 'Más de 30 años de experiencia en deportes de contacto. Campeón de Europa y España. Entrenador profesional de boxeo, kickboxing y muay thai en Andorra la Vella.';
 ---
 
 <BaseLayout title={title} description={description} canonical="https://freddyboxing.com/sobre-mi/">
@@ -72,27 +72,42 @@ const description = 'Más de 30 años de experiencia en artes marciales. Campeó
         </h2>
 
         <div class="path-timeline">
-          <!-- Orígenes -->
+          <!-- Introducción -->
           <div class="timeline-block left">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
-              <span class="timeline-era">LOS ORÍGENES</span>
-              <h3>El Nacimiento de una Leyenda</h3>
-              <p>Más de 30 años forjándome en el ring. No nací campeón, me hice guerrero. Cada golpe recibido fue una lección, cada victoria un escalón hacia la maestría.</p>
+              <span class="timeline-era">INTRODUCCIÓN</span>
+              <h3>Soy Alfred "Freddy" Calero</h3>
+              <p>Entrenador principal del Club K-1 Andorra. Nací en Andorra en 1972 y llevo más de 30 años vinculado a los deportes de contacto, como competidor y como entrenador.</p>
             </div>
           </div>
 
-          <!-- Conquistas -->
+          <!-- Inicios -->
           <div class="timeline-block right">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
-              <span class="timeline-era">LAS CONQUISTAS</span>
+              <span class="timeline-era">LOS INICIOS</span>
+              <h3>El Judo: La Base</h3>
+              <p>Empecé en el judo a los 13 años, donde aprendí valores esenciales como el respeto, la honestidad, el autocontrol y la constancia.</p>
+            </div>
+          </div>
+
+          <!-- Competición -->
+          <div class="timeline-block left">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-era">COMPETICIÓN</span>
               <h3>Campeón de Europa y España</h3>
-              <p>No luché por títulos, luché por demostrar que la disciplina y el corazón superan cualquier talento natural. Los cinturones son solo metal, el verdadero premio es el respeto ganado en cada combate.</p>
+              <p>Compití en Kickboxing de forma amateur y profesional, participando en eventos internacionales en diferentes países y obteniendo títulos como:</p>
+              <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                <li>Campeón de Cataluña</li>
+                <li>Campeón de España</li>
+                <li>Campeón de Europa</li>
+              </ul>
               <div class="combat-gallery">
                 <div class="combat-photo">
-                  <Image src={kickImg} alt="Freddy en combate - Tailandia" width={300} height={200} />
-                  <span class="photo-caption">Tailandia, 2015</span>
+                  <Image src={kickImg} alt="Freddy en combate" width={300} height={200} />
+                  <span class="photo-caption">En combate</span>
                 </div>
                 <div class="combat-photo">
                   <Image src={combatImg1} alt="Freddy en el ring" width={300} height={200} />
@@ -102,27 +117,27 @@ const description = 'Más de 30 años de experiencia en artes marciales. Campeó
             </div>
           </div>
 
-          <!-- Maestría -->
-          <div class="timeline-block left">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <span class="timeline-era">LA MAESTRÍA</span>
-              <h3>Del Ring al Maestrazgo</h3>
-              <p>Titulaciones nacionales e internacionales en boxeo, kick boxing, muay thai y krav maga. No colecciono diplomas, colecciono conocimiento para transmitir a la próxima generación de guerreros.</p>
-            </div>
-          </div>
-
-          <!-- Legado -->
+          <!-- Muay Thai -->
           <div class="timeline-block right">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
-              <span class="timeline-era">EL LEGADO</span>
-              <h3>Club K-1 Andorra - Desde 2007</h3>
-              <p>No entreno atletas, forjo guerreros. Desde 2007, cada alumno que entra por esa puerta es un lienzo en blanco donde pinto disciplina, respeto y fuerza interior. Esta es mi verdadera conquista.</p>
+              <span class="timeline-era">MUAY THAI</span>
+              <h3>Viaje a Tailandia</h3>
+              <p>Me formé también en Muay Thai, viajando a Tailandia para entrenar y competir, aprendiendo directamente de la cultura que dio origen al arte.</p>
+            </div>
+          </div>
+
+          <!-- Filosofía -->
+          <div class="timeline-block left">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-era">FILOSOFÍA</span>
+              <h3>Un Eterno Aprendiz</h3>
+              <p>Me considero un eterno aprendiz. Actualmente mi objetivo es transmitir técnica, cultura deportiva y disciplina a mis alumnos, ya sean principiantes o competidores.</p>
               <div class="combat-gallery">
                 <div class="combat-photo wide">
                   <Image src={combatImg2} alt="Entrenamiento en K1 Andorra" width={400} height={250} />
-                  <span class="photo-caption">K1 Andorra</span>
+                  <span class="photo-caption">Club K-1 Andorra</span>
                 </div>
               </div>
             </div>
@@ -131,28 +146,19 @@ const description = 'Más de 30 años de experiencia en artes marciales. Campeó
       </div>
     </section>
 
-    <!-- Filosofía del Guerrero -->
+    <!-- Lema -->
     <section class="warrior-philosophy">
       <div class="container">
-        <div class="philosophy-grid">
-          <div class="philosophy-text">
-            <h2>LA FILOSOFÍA</h2>
-            <blockquote class="warrior-quote">
-              "Un guerrero no se mide por los combates ganados, sino por las veces que se levanta después de caer. En el ring y en la vida, la batalla más dura es contigo mismo."
-            </blockquote>
-            <p class="philosophy-body">
-              El boxeo, el kick boxing, el muay thai... son solo vehículos. Lo que realmente enseño es disciplina mental, fortaleza emocional y respeto inquebrantable.
-            </p>
-            <p class="philosophy-body">
-              No entreno para formar campeones de torneos, entreno para formar campeones de la vida. Personas que enfrentan sus miedos, superan sus límites y nunca se rinden.
-            </p>
-          </div>
-
-          <div class="philosophy-image">
-            <Image src={functionalImg} alt="Freddy entrenamiento funcional" width={500} height={600} />
-            <div class="philosophy-overlay">
-              <span>ENTRENAMIENTO FUNCIONAL</span>
-            </div>
+        <div class="lema-section">
+          <h2>Mi Lema</h2>
+          <blockquote class="warrior-quote">
+            "La constancia crea la superación."
+          </blockquote>
+          <p class="philosophy-body">
+            Esta frase resume mi filosofía de vida y entrenamiento. No importa de dónde partas, sino la dedicación que pongas cada día para mejorar.
+          </p>
+          <div style="text-align: center; margin-top: 3rem;">
+            <a href="/" class="btn">Volver a Inicio</a>
           </div>
         </div>
       </div>
@@ -176,7 +182,7 @@ const description = 'Más de 30 años de experiencia en artes marciales. Campeó
 
           <div class="arsenal-card">
             <div class="arsenal-icon">🦵</div>
-            <h3>Kick Boxing / K-1</h3>
+            <h3>Kickboxing</h3>
             <p>Puños y piernas en perfecta armonía. La evolución del combate moderno.</p>
           </div>
 
@@ -195,21 +201,6 @@ const description = 'Más de 30 años de experiencia en artes marciales. Campeó
       </div>
     </section>
 
-    <!-- CTA Final Épico -->
-    <section class="warrior-cta">
-      <div class="cta-content">
-        <h2>¿ESTÁS LISTO PARA CONVERTIRTE EN GUERRERO?</h2>
-        <p>El camino no es fácil, pero prometo que vale la pena. Cada gota de sudor, cada músculo que arde, cada límite que superas... te transforman.</p>
-        <div class="cta-buttons">
-          <a href="https://api.whatsapp.com/send?phone=376331785&text=Hola%20Freddy%2C%20quiero%20comenzar%20mi%20camino%20como%20guerrero." class="btn-epic" target="_blank" rel="noopener noreferrer">
-            COMENZAR MI CAMINO
-          </a>
-          <a href="/horarios-precios/" class="btn-epic outline">
-            VER HORARIOS
-          </a>
-        </div>
-      </div>
-    </section>
   </main>
 
   <Footer />
@@ -591,14 +582,13 @@ const description = 'Más de 30 años de experiencia en artes marciales. Campeó
     background: radial-gradient(circle, rgba(225, 6, 0, 0.08) 0%, transparent 70%);
   }
 
-  .philosophy-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+  .lema-section {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
   }
 
-  .philosophy-text h2 {
+  .lema-section h2 {
     font-size: clamp(2.5rem, 5vw, 4rem);
     color: var(--accent);
     margin-bottom: 2rem;
@@ -606,44 +596,35 @@ const description = 'Más de 30 años de experiencia en artes marciales. Campeó
 
   .warrior-quote {
     font-family: Georgia, serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-style: italic;
     color: var(--gold);
-    border-left: 4px solid var(--accent);
-    padding-left: 2rem;
+    border: none;
+    padding: 2rem;
     margin: 2rem 0;
     line-height: 1.6;
-  }
-
-  .philosophy-body {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: rgba(246, 247, 249, 0.9);
-    margin-bottom: 1.5rem;
-  }
-
-  .philosophy-image {
     position: relative;
   }
 
-  .philosophy-image img {
-    width: 100%;
-    height: auto;
-    filter: grayscale(80%) contrast(1.1);
-    clip-path: polygon(0 5%, 5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%);
+  .warrior-quote::before {
+    content: '"';
+    font-size: 6rem;
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(205, 164, 52, 0.2);
+    font-family: Georgia, serif;
   }
 
-  .philosophy-overlay {
-    position: absolute;
-    bottom: 2rem;
-    left: 2rem;
-    background: rgba(225, 6, 0, 0.9);
-    padding: 1rem 2rem;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    color: var(--fg);
-    clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
+  .philosophy-body {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: rgba(246, 247, 249, 0.9);
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   /* Arsenal */
@@ -857,9 +838,8 @@ const description = 'Más de 30 años de experiencia en artes marciales. Campeó
       right: auto !important;
     }
 
-    .philosophy-grid {
-      grid-template-columns: 1fr;
-      gap: 2rem;
+    .lema-section {
+      padding: 0 1rem;
     }
 
     .arsenal-grid {
