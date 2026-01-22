@@ -449,16 +449,23 @@ kill [PID]
 **Commit:** 894b46b
 - Actualización de documentación
 
-**Commit:** (pending)
-**Cambios:**
-1. **Actualización de estadísticas:**
-   - Cambiado: "18 años formando luchadores" → "23 años formando atletas"
-   - Línea 70-71 en `src/pages/index.astro`
-   - Término más abierto e inclusivo
+**Commit:** 30ba8d0
+- **Actualización de estadísticas:**
+  - Cambiado: "18 años formando luchadores" → "23 años formando atletas"
+  - Contador actualizado: 18 → 23
+  - Término más abierto e inclusivo
+  - Archivo: `src/pages/index.astro:70-71`
 
 ---
 
 **Última actualización:** 2026-01-22
-**Versión:** 2.1
+**Versión:** 2.2
 **Estado:** ✅ Producción Ready (pending Formspree config)
 **Dominio:** https://k-1andorra.com/
+
+## 📊 Resumen de Commits
+
+- **4e4a285** - Rebranding completo: Freddy Boxing → Club K-1 Andorra (2026-01-21)
+- **d8d93f3** - Fix: Centrar títulos + Actualizar dominio (2026-01-22)
+- **894b46b** - Docs: Actualizar claude.md (2026-01-22)
+- **30ba8d0** - Update: 23 años formando atletas (2026-01-22)
