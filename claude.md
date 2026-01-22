@@ -64,7 +64,7 @@ Actualización completa del sitio web de Freddy Boxing a Club K-1 Andorra con re
    - Frase animada mantenida: "SIN SACRIFICIO NO HAY GLORIA"
 
 3. **Nueva sección: Estadísticas (líneas 108-129):**
-   - 18 años formando luchadores
+   - 23 años formando atletas
    - +400 alumnos entrenados
    - 2007 fundación del club
    - Contador animado con JavaScript
@@ -272,7 +272,7 @@ Actualización completa del sitio web de Freddy Boxing a Club K-1 Andorra con re
 /
 ├── / (Home)
 │   ├── Hero con frase animada
-│   ├── Estadísticas (18 años, 400+ alumnos, 2007)
+│   ├── Estadísticas (23 años, 400+ alumnos, 2007)
 │   ├── Filosofía (5 valores)
 │   ├── Disciplinas (Boxeo, Kickboxing, Muay Thai, Privadas)
 │   ├── Entrenador (Alfred Freddy Calero)
@@ -441,17 +441,20 @@ kill [PID]
 ## 📝 Actualizaciones Post-Lanzamiento
 
 ### 2026-01-22
+
 **Commit:** d8d93f3
+- Fix títulos centrados en páginas de disciplinas
+- Actualización de dominio a k-1andorra.com
 
+**Commit:** 894b46b
+- Actualización de documentación
+
+**Commit:** (pending)
 **Cambios:**
-1. **Fix títulos centrados:**
-   - Corregido problema de h2 no centrados en páginas de disciplinas
-   - Modificado `index.astro` para aplicar estilos solo a h2 con clase `.text-center`
-   - Cambiado de `display: inline-block` a `display: block`
-
-2. **Actualización de dominio:**
-   - Canonical URLs actualizadas: `freddyboxing.com` → `k-1andorra.com`
-   - 9 archivos actualizados (todas las páginas del sitio)
+1. **Actualización de estadísticas:**
+   - Cambiado: "18 años formando luchadores" → "23 años formando atletas"
+   - Línea 70-71 en `src/pages/index.astro`
+   - Término más abierto e inclusivo
 
 ---
 
