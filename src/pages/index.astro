@@ -20,7 +20,7 @@ const title = 'Club K-1 Andorra – Boxeo, Kickboxing y Muay Thai en Andorra la 
 const description = 'Entrenamientos de Boxeo, Kickboxing y Muay Thai para todos los niveles en Andorra la Vella. Ponte en forma, aprende técnica y supera tus límites en un ambiente profesional y motivador.';
 ---
 
-<BaseLayout title={title} description={description} canonical="https://freddyboxing.com/">
+<BaseLayout title={title} description={description} canonical="https://k-1andorra.com/">
   <IntroAnimation />
   <Header />
   <WhatsAppButton />
@@ -856,13 +856,16 @@ const description = 'Entrenamientos de Boxeo, Kickboxing y Muay Thai para todos 
   }
 
   /* Títulos de sección con detalle */
-  h2 {
+  .text-center h2,
+  h2.text-center {
     position: relative;
-    display: inline-block;
+    display: block;
     padding-bottom: 1rem;
+    text-align: center;
   }
 
-  h2::after {
+  .text-center h2::after,
+  h2.text-center::after {
     content: '';
     position: absolute;
     bottom: 0;
