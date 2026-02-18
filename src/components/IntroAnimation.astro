@@ -1,13 +1,13 @@
 ---
 import { Image } from 'astro:assets';
-import logoImg from '../assets/images/logo-2-1-2048x1743.png';
+import logoImg from '../assets/images/logo-nuevo.png';
 ---
 
 <div id="intro-animation" class="intro-animation">
   <div class="intro-content">
     <!-- Logo con efecto de carga -->
     <div class="intro-logo">
-      <Image src={logoImg} alt="Freddy Boxing" width={300} height={255} />
+      <Image src={logoImg} alt="Club K-1 Andorra" width={400} height={347} />
       <div class="loading-bar"></div>
     </div>
   </div>
@@ -56,7 +56,7 @@ import logoImg from '../assets/images/logo-2-1-2048x1743.png';
   .intro-logo img {
     width: 100%;
     height: auto;
-    max-width: 300px;
+    max-width: 400px;
   }
 
   @keyframes logoAppear {
@@ -120,7 +120,7 @@ import logoImg from '../assets/images/logo-2-1-2048x1743.png';
 
   @media (max-width: 768px) {
     .intro-logo img {
-      max-width: 250px;
+      max-width: 320px;
       height: auto;
     }
   }

@@ -7,17 +7,17 @@ export interface Props {
 }
 
 const {
-  title = 'Boxeo, K‑1 y Muay Thai en Andorra | Freddy Boxing Club',
-  description = 'Entrena en Andorra con metodología clara: técnica, condición y mentalidad. Clases de boxeo, K‑1 y muay thai para todos los niveles.',
+  title = 'Club K-1 Andorra | Boxeo, Kickboxing y Muay Thai en Andorra la Vella',
+  description = 'Entrena en Andorra con metodología clara: técnica, condición y mentalidad. Clases de boxeo, kickboxing y muay thai para todos los niveles.',
   canonical,
-  image = 'https://freddyboxing.com/og-image.jpg'
+  image = 'https://k-1andorra.com/og-image.jpg'
 } = Astro.props;
 
 const currentUrl = canonical || Astro.url.href;
 ---
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AD">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -25,18 +25,107 @@ const currentUrl = canonical || Astro.url.href;
     <meta name="description" content={description} />
     <link rel="canonical" href={currentUrl} />
 
+    <!-- Geo targeting for Andorra -->
+    <meta name="geo.region" content="AD" />
+    <meta name="geo.placename" content="Andorra la Vella" />
+
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
     <meta property="og:url" content={currentUrl} />
+    <meta property="og:locale" content="es_AD" />
+    <meta property="og:site_name" content="Club K-1 Andorra" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
+
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsActivityLocation",
+      "name": "Club K-1 Andorra",
+      "description": "Boxeo, Kickboxing y Muay Thai en Andorra la Vella. Entrenamientos profesionales para todos los niveles con más de 23 años de experiencia.",
+      "url": "https://k-1andorra.com",
+      "logo": "https://k-1andorra.com/logo-nuevo.png",
+      "image": "https://k-1andorra.com/og-image.jpg",
+      "priceRange": "€€",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Centre, Camí Esportiu dels Serradells",
+        "addressLocality": "Andorra la Vella",
+        "postalCode": "AD500",
+        "addressCountry": "AD"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "42.5063",
+        "longitude": "1.5218"
+      },
+      "telephone": "+376331785",
+      "email": "info@k-1andorra.com",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "07:00",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "14:00"
+        }
+      ],
+      "sameAs": [],
+      "founder": {
+        "@type": "Person",
+        "name": "Alfred 'Freddy' Calero",
+        "jobTitle": "Entrenador Principal",
+        "description": "Campeón de Europa y España de Kickboxing"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Andorra"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Disciplinas de combate",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Boxeo",
+              "description": "Clases de boxeo para todos los niveles"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Kickboxing",
+              "description": "Entrenamiento profesional de kickboxing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Muay Thai",
+              "description": "Arte marcial tailandés tradicional"
+            }
+          }
+        ]
+      }
+    }
+    </script>
 
     <!-- Preconnect a Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
