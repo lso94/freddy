@@ -29,7 +29,7 @@ Actualización completa del sitio web de Freddy Boxing a Club K-1 Andorra con re
 - sobre-mi.astro
 
 ### 3. Información de Contacto Actualizada
-- **Email:** info@freddyboxing.com → **info@k1andorra.com**
+- **Email:** info@freddyboxing.com → **k-1andorra@hotmail.com**
 - **Dirección agregada:** Centre, Camí Esportiu dels Serradells, AD500 Andorra la Vella, Andorra
 - **Teléfono/WhatsApp:** +376 331 785 (mantenido)
 
@@ -47,7 +47,7 @@ Actualización completa del sitio web de Freddy Boxing a Club K-1 Andorra con re
 **Cambios realizados:**
 - Branding: "FREDDY BOXING" → "CLUB K-1 ANDORRA"
 - Tagline: "Boxeo, Kickboxing y Muay Thai en Andorra"
-- Email: info@k1andorra.com
+- Email: k-1andorra@hotmail.com
 - **Nueva sección:** Dirección física completa
 - Enlaces actualizados a nuevas páginas de disciplinas
 
@@ -116,7 +116,7 @@ Actualización completa del sitio web de Freddy Boxing a Club K-1 Andorra con re
 2. **Info card:**
    - 📍 Dirección completa
    - 📞 Teléfono/WhatsApp: +376 331 785
-   - ✉️ Email: info@k1andorra.com
+   - ✉️ Email: k-1andorra@hotmail.com
 3. **CTAs card:**
    - Reservar primera clase (WhatsApp)
    - Abrir WhatsApp
@@ -142,7 +142,7 @@ Actualización completa del sitio web de Freddy Boxing a Club K-1 Andorra con re
    **Kickboxing:**
    - Imagen: 11A_00015.jpeg
    - 5 beneficios: Cardio intenso, Flexibilidad, Potencia, Equilibrio, Autoconfianza
-   - Link: /disciplinas/k1/
+   - Link: /disciplinas/kickboxing/
 
    **Muay Thai:**
    - Imagen: IMG_1657-scaled.jpeg
@@ -252,7 +252,7 @@ Actualización completa del sitio web de Freddy Boxing a Club K-1 Andorra con re
 
 **Pasos:**
 1. Crear cuenta en https://formspree.io
-2. Usar email: info@k1andorra.com
+2. Usar email: k-1andorra@hotmail.com
 3. Obtener Form ID
 4. Reemplazar `YOUR_FORM_ID` en:
    ```html
@@ -296,7 +296,7 @@ Actualización completa del sitio web de Freddy Boxing a Club K-1 Andorra con re
 │   ├── 8 Beneficios
 │   └── CTA
 │
-├── /disciplinas/k1/ (Kickboxing)
+├── /disciplinas/kickboxing/ (Kickboxing)
 │   ├── Hero
 │   ├── Práctica del Kickboxing
 │   ├── 8 Beneficios
@@ -401,7 +401,7 @@ kill [PID]
 ## 📅 Próximos Pasos Sugeridos
 
 ### Corto Plazo
-1. Configurar Formspree con info@k1andorra.com
+1. Configurar Formspree con k-1andorra@hotmail.com
 2. Actualizar URLs canónicas cuando se defina dominio final
 3. Añadir contenido a /horarios-precios/
 
@@ -422,7 +422,7 @@ kill [PID]
 **Gimnasio:** Club K-1 Andorra
 **Entrenador:** Alfred "Freddy" Calero
 **Ubicación:** Centre, Camí Esportiu dels Serradells, AD500 Andorra la Vella
-**Contacto:** +376 331 785 | info@k1andorra.com
+**Contacto:** +376 331 785 | k-1andorra@hotmail.com
 **Horario:**
 - Lunes a Viernes: 7:00 - 22:00
 - Sábado: 9:00 - 14:00
@@ -458,10 +458,51 @@ kill [PID]
 
 ---
 
-**Última actualización:** 2026-01-22
-**Versión:** 2.2
-**Estado:** ✅ Producción Ready (pending Formspree config)
+### 2026-02-19
+
+**Commit:** dea11db
+- **SEO + Branding completo:**
+  - Dominio actualizado a `https://k-1andorra.com` en astro.config.mjs
+  - Schema.org LocalBusiness con info completa del negocio
+  - Meta tags de geo-targeting para Andorra (geo.region, geo.placename)
+  - Nuevo logo triangular (logo-nuevo.png) en Header e IntroAnimation
+  - Logo Header: 90px altura
+  - Logo IntroAnimation: 400px
+  - Renombrado `k1.astro` → `kickboxing.astro` (URL: /disciplinas/kickboxing/)
+  - Creado robots.txt con sitemap
+  - Email actualizado a `k-1andorra@hotmail.com`
+
+**Commit:** c009590
+- Cambio de email a k-1andorra@hotmail.com en todos los archivos
+
+**Commit:** (pendiente)
+- Consistencia en titles: "Club K1" → "Club K-1" en todas las páginas
+- Corregido "kick boxing" → "Kickboxing" en meta descriptions
+
+**Deployment:**
+- Sitio desplegado en Vercel
+- Sitemap disponible en /sitemap-index.xml
+
+---
+
+## 📋 Tareas Pendientes
+
+1. [ ] Configurar Formspree para formulario de contacto
+2. [ ] Agregar fotos profesionales del gimnasio
+3. [ ] Crear contenido de video
+4. [ ] Implementar versiones en catalán y francés (hreflang)
+5. [ ] Integrar Google Maps en página de contacto
+6. [ ] Agregar urgencia y escasez en CTAs
+7. [ ] Crear sistema de captura de email (newsletter)
+8. [ ] Configurar Google Business Profile
+
+---
+
+**Última actualización:** 2026-02-19
+**Versión:** 3.0
+**Estado:** ✅ Producción - Desplegado en Vercel
 **Dominio:** https://k-1andorra.com/
+**Email:** k-1andorra@hotmail.com
 
 ## 📊 Resumen de Commits
 
@@ -469,3 +510,5 @@ kill [PID]
 - **d8d93f3** - Fix: Centrar títulos + Actualizar dominio (2026-01-22)
 - **894b46b** - Docs: Actualizar claude.md (2026-01-22)
 - **30ba8d0** - Update: 23 años formando atletas (2026-01-22)
+- **dea11db** - SEO + Branding: Dominio k-1andorra.com, Schema.org y nuevo logo (2026-02-19)
+- **c009590** - Update: Cambiar email a k-1andorra@hotmail.com (2026-02-19)
