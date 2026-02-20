@@ -340,11 +340,24 @@ const description = 'Entrenamientos de Boxeo, Kickboxing y Muay Thai para todos 
   /* Hero */
   .hero {
     position: relative;
-    min-height: 90vh;
+    min-height: 100vh;
+    padding-top: 130px; /* compensa el header fijo (90px logo + 40px padding) */
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+  }
+
+  @media (max-width: 1024px) {
+    .hero {
+      padding-top: 105px; /* 65px logo + 40px padding */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      padding-top: 90px; /* 52px logo + 38px padding */
+    }
   }
 
   .hero::before {
