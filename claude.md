@@ -485,9 +485,40 @@ kill [PID]
 
 ---
 
+### 2026-02-20
+
+**Commit:** c05a7d4
+- **Favicon completo:**
+  - `public/favicon.svg` — logo del club en blanco sobre fondo #0B0D0F, viewBox 1280×1280 (cuadrado)
+  - `public/favicon.ico` — ICO multi-tamaño (generado con realfavicongenerator.net)
+  - `public/favicon-96x96.png` — PNG 96×96
+  - `public/apple-touch-icon.png` — 180×180 para iPhone/iPad
+  - `public/web-app-manifest-192x192.png` y `512x512.png` — PWA Android
+  - `public/site.webmanifest` — nombre "Club K-1 Andorra", theme_color #0B0D0F
+  - `BaseLayout.astro` — 7 tags de favicon en orden correcto (SVG → PNG → ICO → Apple → Manifest)
+
+- **Fix header móvil (S8+ y pantallas pequeñas):**
+  - Logo reducido: 65px en ≤1024px, 52px en ≤480px (era 90px fijo)
+  - Menú móvil: `top` corregido a 105px/90px según breakpoint (coincide con altura real del header)
+  - Hero (`index.astro`): `padding-top` por breakpoint (130px desktop / 105px tablet / 90px móvil) para compensar el header fijo
+
+- **Redes sociales en header:**
+  - Desktop: 3 iconos SVG inline (Instagram, Facebook, TikTok) a la derecha de los links, separados por línea vertical
+  - Móvil: mismos iconos al final del menú desplegable, separados por línea horizontal
+  - URLs: instagram.com/k1andorra | facebook.com/k1andorragym | tiktok.com/@freddy_coach_boxing
+
+**Commit:** 79819eb
+- **Redes sociales en footer:**
+  - 3 iconos (Instagram, Facebook, TikTok) debajo del email en la sección "Contacto" del footer
+  - Mismo estilo hover que el header (color accent en hover, translateY -2px)
+
+---
+
 ## 📋 Tareas Pendientes
 
-1. [ ] Configurar Formspree para formulario de contacto
+1. [ ] Configurar formulario de contacto (landing page) — `src/pages/index.astro:296`
+       Opciones: Formspree (50 envíos/mes gratis) o Web3Forms (250/mes gratis)
+       Pendiente: reemplazar `YOUR_FORM_ID` con ID real
 2. [ ] Agregar fotos profesionales del gimnasio
 3. [ ] Crear contenido de video
 4. [ ] Implementar versiones en catalán y francés (hreflang)
@@ -498,8 +529,8 @@ kill [PID]
 
 ---
 
-**Última actualización:** 2026-02-19
-**Versión:** 3.0
+**Última actualización:** 2026-02-20
+**Versión:** 3.1
 **Estado:** ✅ Producción - Desplegado en Vercel
 **Dominio:** https://k-1andorra.com/
 **Email:** k-1andorra@hotmail.com
@@ -512,3 +543,5 @@ kill [PID]
 - **30ba8d0** - Update: 23 años formando atletas (2026-01-22)
 - **dea11db** - SEO + Branding: Dominio k-1andorra.com, Schema.org y nuevo logo (2026-02-19)
 - **c009590** - Update: Cambiar email a k-1andorra@hotmail.com (2026-02-19)
+- **c05a7d4** - Fix: Favicon completo + header móvil S8+ + social icons en header (2026-02-20)
+- **79819eb** - Add: Social icons en footer sección Contacto (2026-02-20)
