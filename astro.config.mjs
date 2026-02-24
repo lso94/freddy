@@ -11,5 +11,9 @@ export default defineConfig({
   adapter: vercel({
     webAnalytics: { enabled: true }
   }),
-  trailingSlash: 'always'
+  trailingSlash: 'always',
+  redirects: {
+    '/disciplinas/k1/': '/disciplinas/kickboxing/',
+    '/cursos/': '/',
+  }
 });

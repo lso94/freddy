@@ -1,1 +1,35 @@
-{}
+{
+  "redirects": [
+    {
+      "source": "/disciplinas/k1",
+      "destination": "/disciplinas/kickboxing/",
+      "permanent": true
+    },
+    {
+      "source": "/disciplinas/k1/",
+      "destination": "/disciplinas/kickboxing/",
+      "permanent": true
+    },
+    {
+      "source": "/cursos",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/cursos/",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "index, follow"
+        }
+      ]
+    }
+  ]
+}

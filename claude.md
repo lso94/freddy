@@ -529,11 +529,29 @@ kill [PID]
 
 ---
 
-**Última actualización:** 2026-02-20
-**Versión:** 3.1
+**Última actualización:** 2026-02-24
+**Versión:** 3.2
 **Estado:** ✅ Producción - Desplegado en Vercel
 **Dominio:** https://k-1andorra.com/
 **Email:** k-1andorra@hotmail.com
+
+---
+
+### 2026-02-24
+
+**Fix Search Console errors:**
+- `astro.config.mjs` — Añadidos redirects 301:
+  - `/disciplinas/k1/` → `/disciplinas/kickboxing/` (URL renombrada en rebranding)
+  - `/cursos/` → `/` (página eliminada)
+- `BaseLayout.astro` — Corregida OG image default: `og-image.jpg` (no existía) → `logo-nuevo.png`
+- `BaseLayout.astro` — Corregida misma referencia en Schema.org JSON-LD
+- `vercel.json` — Limpiado (redirects ahora gestionados desde astro.config.mjs)
+
+**Causa de los errores en Search Console:**
+- 404: Google tenía indexadas URLs antiguas de antes del rebranding
+- 403: Probable protección de deployments de preview de Vercel (ver nota en Tareas Pendientes)
+
+---
 
 ## 📊 Resumen de Commits
 
